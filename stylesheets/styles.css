@@ -1,0 +1,514 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	margin: 0px;
+	background-color:#fcfdfd;
+	
+
+	
+	
+}
+
+#black{
+	background-color:#000;
+	height:436px;
+}
+/* This lays the flag behind the blue gradient */
+#flag{
+	width:1024px;
+	height:407px;
+	margin: 0 auto;
+	background-image:url(../images/top.png);
+
+}
+	
+
+/* This Lays the blue over top the flag*/
+#wrapper{
+	background-image:url(../images/back.png);
+	background-repeat:repeat-x;
+	margin: 0;
+	height: 436px;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	
+}
+
+/* This lays the stars and strips on top of the blue */
+#stars{
+	height: 407px;
+	background-image:url(../images/stars.png);
+	margin: 0 auto;
+}
+	
+#contentwrap{
+	width:1024px;
+	margin: 0 auto;
+}
+
+#logo{
+	width:437px;
+	height:119px;
+	float:right;
+	padding-top:120px;
+	margin-right: 20px;
+}
+
+#location{
+	flaot:left;
+	margin-left:80px;
+	padding-top:80px;
+	width:267px;
+	height:225px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+#bottom{
+	width:100%;
+	min-height:300px;
+	background-color: #fcfdfd;
+	background-image:url(../images/backbottom.png);
+	background-repeat:repeat-x;
+
+	
+}
+
+#bottomwrap{
+
+	margin: 0 auto;
+	height: 100%;
+	width: 1024px;
+	bottom:0;
+	padding: 15px 0 0 0;
+	
+}
+	
+	input#home{
+	height:35px;
+	width:237px;
+	background-image:url(../images/form.png);
+	background-color:transparent;
+	margin-top:5px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	background-repeat: no-repeat;
+	padding: 0 15px 0 15px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	color:#797979;
+	
+		
+	}
+	input[type="text"]:focus {color:#000000}
+	textarea:focus, input:focus{outline:none}
+
+	.go {
+		height:26px;
+	width:59px;
+	background-image:url(../images/go.png);
+	background-color:transparent;
+	margin-top:5px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	background-repeat: no-repeat;
+
+	
+	color:#797979;
+	float:right;
+	}
+	
+	#videos{
+	
+		margin-left: 80px;
+	}
+	
+	#video{
+		background-color:#0078c6;
+		width:202px;
+		height: 100%;
+		padding: 10px;
+	}
+	#shadowtop{
+		width: 222px;
+		height: 22px;
+		background-image:url(../images/shadowtop.png);
+		background-repeat:no-repeat;
+	}
+		#shadowbottom{
+		width: 222px;
+		height: 37px;
+		background-image:url(../images/shadowbottom.png);
+		background-repeat:no-repeat;
+	}
+	
+	#videobox1{
+		float:left;
+	}
+	
+	#videobox2{
+		float:left;
+		margin-left: 20px;
+	}
+		
+		
+		
+		
+		
+		
+		
+		
+		/* SUB PAGE STYLES */
+		
+		hr{
+	background-color:#039;
+	height:1px;
+	border:none;
+	margin:0 0 5px 0px;
+}
+
+
+body#sub{
+	margin: 0px;
+	background-color:#0e3269;
+	padding: 0px;
+	background-repeat: repeat-x;
+	background-position: center 210px ;
+	background-image:url(../images/bottom-sub.png);
+	
+
+	
+	
+}
+
+body#admin{
+	margin: 0px;
+	background-color:#FFFFFF;
+	padding: 0px;
+	background-repeat: repeat-x;
+	
+	background-image:url(../images/bottom-sub.png);
+	
+
+	
+	
+}
+
+h2{
+	font-size:18px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	
+}
+
+td{
+	font-size:12px;
+	color:#06C;
+}
+
+/* This lays the flag behind the blue gradient */
+#flagInside{
+	width:1024px;
+	height:210px;
+	margin: 0 auto;
+	background-image:url(../images/top.png);
+
+}
+	
+
+/* This Lays the blue over top the flag*/
+#wrapperInside{
+	background-image:url(../images/back2.png);
+	background-repeat:repeat-x;
+	margin: 0;
+	
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	
+}
+
+
+
+#contentwrapInside{
+	width:1024px;
+	margin: 0 auto;
+	height:100%;
+}
+
+#logoInside{
+	width:100%;
+	height:56px;
+	text-align:right;
+	padding-top:15px;
+	margin-right: 20px;
+}
+
+
+	
+
+
+
+#colLeft{
+
+	width:680px;
+	padding:10px;
+	background-image:url(../images/blueborder.png);
+	background-repeat:repeat;
+	min-height: 400px;
+
+
+
+}
+
+#profile{
+
+	width:680px;
+	
+	background-repeat:repeat;
+	min-height: 400px;
+	margin:0 auto;
+
+
+
+}
+
+#profilebar{
+
+	
+	
+	background-color:#F4F4F4;
+	width:100%;
+	padding:2px;
+	c
+
+
+
+}
+
+#profilebar h2{
+	margin:0px;
+	color: #FFFFFF;
+}
+
+.bordright{
+	border-right:thin;
+}
+
+#contentColLeft{
+
+	background-color: #FFFFFF;
+	min-height: 400px;
+	padding:15px;
+}
+
+#contentColLeft h2{
+	color:#06C;
+}
+
+#contentColRight{
+
+	background-color: #3195db;
+	min-height: 400px;
+	background-image:url(../images/backright.png);
+	background-repeat:repeat-x;
+	padding:10px;
+	
+}
+
+#contentColRight hr{
+	background-color:#FFF;
+	height:1px;
+	border:none;
+}
+
+
+#colRight{
+	float:right;
+	width:280px;
+	
+	
+	padding:10px;
+	min-height:400px;
+	color: #FFFFFF;
+	background-image:url(../images/lightblueborder.png);
+	background-repeat:repeat;
+
+}
+	
+#columnwrap{
+	height: 100%;
+	width:1024px;
+	margin: 50px auto 0 auto;
+	
+
+}
+
+#columnwrapAdmin{
+	height: 100%;
+	width:1024px;
+	margin: 20px auto 0 auto;
+	
+
+}
+
+#divide{
+	background-image:url(../images/greybar.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	margin: 0 auto;
+	height: 8px;
+	width:648px;
+	padding: 15px 0 15px 0;
+}
+
+.gray{
+	color:#CCCCCC;
+}
+
+.black{
+	color:#000000;
+}
+
+        /* slider specific CSS */
+        .sliderGallery {
+           /* background: url(http://static.jqueryfordesigners.com/demo/images/productbrowser_background_20070622.jpg) no-repeat;*/
+            overflow: hidden;
+            position: relative;
+            padding: 10px;
+            height: 160px;
+            width: 560px;
+        }
+        
+        .sliderGallery UL {
+            position: absolute;
+            list-style: none;
+            overflow: none;
+            white-space: nowrap;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .sliderGallery UL LI {
+            display: inline;
+        }
+        
+        .slider {
+            width: 542px;
+            height: 17px;
+            margin-top: 140px;
+            margin-left: 5px;
+            padding: 1px;
+            position: relative;
+            background: url(../images/productbrowser_scrollbar_20070622.png) no-repeat;
+        }
+        
+        .handle {
+            position: absolute;
+            cursor: move;
+            height: 17px;
+            width: 181px;
+            top: 0;
+            background: url(../images/productbrowser_scroller_20080115.png) no-repeat;
+            z-index: 100;
+        }
+        
+        .slider span {
+            color: #bbb;
+            font-size: 80%;
+            cursor: pointer;
+            position: absolute;
+            z-index: 110;
+            top: 3px;
+        }
+        
+        .slider .slider-lbl1 {
+            left: 50px;
+        }
+        
+        .slider .slider-lbl2 {
+            left: 107px;
+        }
+        
+        .slider .slider-lbl3 {
+            left: 156px;
+        }
+
+        .slider .slider-lbl4 {
+            left: 280px;
+        }
+
+        .slider .slider-lbl5 {
+            left: 455px;
+        }
+		
+		
+/* For ADVERTISMENT */
+		
+		/*--Main Container--*/
+.main_view {
+	float: left;
+	position: relative;
+}
+/*--Window/Masking Styles--*/
+.window {
+	height:218px;	width: 260px;
+	overflow: hidden; /*--Hides anything outside of the set width/height--*/
+	position: relative;
+}
+.image_reel {
+	position: absolute;
+	top: 0; left: 0;
+}
+.image_reel img {float: left;}
+
+/*--Paging Styles--*/
+.paging {
+	position: absolute;
+	bottom: 40px; right: -7px;
+	width: 178px; height:47px;
+	z-index: 100; /*--Assures the paging stays on the top layer--*/
+	text-align: center;
+	line-height: 40px;
+	background: url(paging_bg2.png) no-repeat;
+	display: none; /*--Hidden by default, will be later shown with jQuery--*/
+}
+.paging a {
+	padding: 5px;
+	text-decoration: none;
+	color: #fff;
+}
+.paging a.active {
+	font-weight: bold;
+	background: #920000;
+	border: 1px solid #610000;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+.paging a:hover {font-weight: bold;}
+
+/* END ADVERTISEMENT */
