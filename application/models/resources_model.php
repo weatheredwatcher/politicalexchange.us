@@ -19,7 +19,7 @@ class Resources_model extends CI_Model {
 			$this->upload_date = $this->date;
 			
 
-			$this->db->insert('resource', $this);
+			$this->db->insert('resources', $this);
 
 		}
 }
