@@ -43,9 +43,9 @@ $("#preview_01").cjImageVideoPreviewer({
 <div id="contentwrap">
 	
     <div id="stars">
-    	<div id="logo"><img src="<?=base_url()?>images/logo.png"  alt="Political Exchange" /></div>
+    	<div id="logo"><img src="images/logo.png"  alt="Political Exchange" /></div>
     	<div id="location" >
-        <img src="<?=base_url()?>images/location.png" width="118" height="27" alt="Enter Your Location" style="margin-bottom:5px;"/>
+        <img src="images/location.png" width="118" height="27" alt="Enter Your Location" style="margin-bottom:5px;"/>
 <?php 
 
 
@@ -134,16 +134,16 @@ echo form_close();
 <div id="bottomwrap">
 
   <div id="videos">
-   <div id="featured"> <img src="<?=base_url()?>images/featured.png" alt="Featured Video" width="169" height="22" /></div>
+   <div id="featured"> <img src="images/featured.png" alt="Featured Video" width="169" height="22" /></div>
 <div id="videobox1">
   <div id="shadowtop"></div>
-    	<div id="video"><div id="preview_01" class="thumbnail"><img src="<?=base_url()?>images/video1.png" width="205" height="114" alt="Video" /></div></div>
+    	<div id="video"><div id="preview_01" class="thumbnail"><img src="images/video1.png" width="205" height="114" alt="Video" /></div></div>
     <div id="shadowbottom"></div>
   </div>
     
     <div id="videobox2">
       <div id="shadowtop"></div>
-    	<div id="video"><img src="<?=base_url()?>images/video1.png" width="205" height="114" alt="Video" /></div>
+    	<div id="video"><img src="images/video1.png" width="205" height="114" alt="Video" /></div>
     <div id="shadowbottom"></div>
     </div>
         

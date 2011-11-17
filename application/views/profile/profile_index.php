@@ -109,7 +109,7 @@ $(document).ready(function() {
                	  <h2>Profiles </h2>
                   <?php foreach($query->result() as $row):?>
 
-				<?=$row->name;?><br />
+				<?php echo $row->name;?><br />
 
 				<?php endforeach;?>
                 </div>

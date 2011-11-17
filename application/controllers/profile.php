@@ -10,9 +10,10 @@ class Profile extends CI_Controller {
 	function index()
 	{
 		
-	
-			$data['query'] = $this->db->get('profiles');
 			$this->load->model('profile_model');
+			
+			$data['query'] = $this->db->get('profiles');
+			
 			$this->load->view('profile/profile_index', $data);
 			
 	}
