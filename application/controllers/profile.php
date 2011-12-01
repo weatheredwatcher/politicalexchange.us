@@ -29,9 +29,36 @@ class Profile extends CI_Controller {
 	function insert_profile(){
 	    
 		$this->load->model('profile_model');
-		$this->profile_model->insert_profile(); 
+		
+		//upload
+		$config['upload_path'] = './uploads/';
+		$config['allowed_types'] = 'gif|jpg|png|mp4';  
+		$config['max_size']	= '400000';
+		$config['remove_spaces'] = TRUE;
+		//$config['max_width']  = '1024';
+		//$config['max_height']  = '768';
+
+		$this->upload->initialize($config);
+
+		if ( ! $this->upload->do_upload())
+		{
+			$error = array('error' => $this->upload->display_errors());
+
+			$this->load->view('profile/profile_new', $error);
+		}
+		else
+		{
+			$data = array('upload_data' => $this->upload->data());
+			$this->profile_model->insert_profile(); 
+			$this->load->view('upload/upload_success', $data);
+		}
+		
+		//end upload
+		
 		//$this->db->insert('profiles', $this->input->post());
-		redirect('profile', 'location');
+		//redirect('profile', 'location');
+		
+		
 	}
 	
 	function update(){
@@ -47,6 +74,31 @@ class Profile extends CI_Controller {
 			
 	
 	}
+	
+	function do_upload()
+		{
+			$config['upload_path'] = './uploads/';
+			$config['allowed_types'] = 'gif|jpg|png|mp4';  
+			$config['max_size']	= '400000';
+			$config['remove_spaces'] = TRUE;
+			//$config['max_width']  = '1024';
+			//$config['max_height']  = '768';
+
+			$this->upload->initialize($config);
+
+			if ( ! $this->upload->do_upload())
+			{
+				$error = array('error' => $this->upload->display_errors());
+
+				$this->load->view('upload/upload_form', $error);
+			}
+			else
+			{
+				$data = array('upload_data' => $this->upload->data());
+
+				$this->load->view('upload/upload_success', $data);
+			}
+		}
 	
 	function login(){
 		

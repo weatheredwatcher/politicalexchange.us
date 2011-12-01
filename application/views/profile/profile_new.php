@@ -254,6 +254,7 @@ $(document).ready(function() {
                 <div id="topProfile">
                	  <h2> New Profile </h2>
                   <hr />
+				   <?php echo $error;?>
                    <?php include('_create.php'); ?>
                 </div>
                 

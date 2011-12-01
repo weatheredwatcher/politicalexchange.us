@@ -16,7 +16,7 @@ class Main extends CI_Controller {
 	     
 	    $data['address'] = urlencode($this->input->post('address'));
 		$data['city'] = urlencode($this->input->post('city'));
-		$data['state'] = urlencode($this->input->post('state'));
+		$data['state'] = urlencode(strtoupper($this->input->post('state')));
 		$data['zip'] = urlencode($this->input->post('zip'));
  
  //defining the locator callback    
@@ -26,9 +26,9 @@ class Main extends CI_Controller {
 
     foreach($browser['#poll_finder'] as $location) {
       
-      $hours = pq($location)->find('p:nth-child(5)')->getStrings();
-      $address = pq($location)->find('p:nth-child(4)')->getStrings();
-	  $name = pq($location)->find('p:nth-child(3)')->getStrings();
+      $hours = pq($location)->find('p:nth-child(6)')->getStrings();
+      $address = pq($location)->find('p:nth-child(5)')->getStrings();
+	  $name = pq($location)->find('p:nth-child(4)')->getStrings();
 	
 	  $display_hours = ltrim($hours[0],  'Polling Place Hours:');
 	  $display_address = ltrim($address[0],  'Address:');

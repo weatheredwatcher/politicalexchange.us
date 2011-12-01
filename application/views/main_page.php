@@ -119,7 +119,12 @@ $(document).ready(function() {
 <div id="contentwrapInside">
 	
 
-    	<div id="logoInside"><img src="<?php echo base_url();?>images/logo-icon.png"  alt="Political Exchange" width="84" height="56" /></div>
+    	<div id="logoInside">
+			<div id="politician"> <ul>
+	    <li><a href="#">Login </a></li>
+	    <li>  <a href="#">Are you a Politician? </a></li>
+	    </ul></div>
+			<img src="<?php echo base_url();?>images/logo-icon.png"  alt="Political Exchange" width="84" height="56" /></div>
    
 		
         <div id="columnwrap">

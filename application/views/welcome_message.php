@@ -43,7 +43,12 @@ $("#preview_01").cjImageVideoPreviewer({
 <div id="contentwrap">
 	
     <div id="stars">
-    	<div id="logo"><img src="images/logo.png"  alt="Political Exchange" /></div>
+    	<div id="logo">
+			<div id="politician"> <ul>
+	    <li><a href="#">Login </a></li>
+	    <li>  <a href="#">Are you a Politician? </a></li>
+	    </ul></div>
+			<img src="images/logo.png"  alt="Political Exchange" /></div>
     	<div id="location" >
         <img src="images/location.png" width="118" height="27" alt="Enter Your Location" style="margin-bottom:5px;"/>
 <?php 
@@ -74,8 +79,8 @@ $state = array(
               'name'        => 'state',
               'id'          => 'home',
               'value'       => 'state',
-              'maxlength'   => '100',
-              'size'        => '50',
+              'maxlength'   => '2',
+              'size'        => '2',
               'onClick'     => 'form_onCLick()',
               'onFocus'     => 'form_onFocus()'
                );

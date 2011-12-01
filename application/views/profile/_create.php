@@ -44,7 +44,6 @@ $password = array(
               );
 
 
-//TODO:This is the spot where we upload the avatar...I am thinking it should be a pointer to a resource as it can be an image or a video...maybe a modal dialog box pops up and gives us a media manager, returning the id?
 $attributes = array('class' => 'profile', 'id' => 'profile_form');
 $campaign_name = array(
 		     'name'        => 'campaign_name',
@@ -144,6 +143,13 @@ $about_me = array(
       'onClick'     => 'form_onCLick()',
       'onFocus'     => 'form_onFocus()'
 );
+
+$upload = array(
+      'name'        => 'avatar_id',
+      'id'          => 'avatar_id',
+      'onClick'     => 'form_onCLick()',
+      'onFocus'     => 'form_onFocus()'
+);
 $party_affiliation = array(
 	'name'        => 'party_affiliation',
       'id'          => 'party_affiliation',
@@ -181,7 +187,7 @@ $submit = array(
 );
 
 
-echo form_open('profile/insert_profile', $attributes);
+echo form_open_multipart('profile/insert_profile', $attributes);
 echo form_fieldset('Login Details');
 echo form_label('Username', 'login');
 echo form_input($login).'<br />';
@@ -203,13 +209,15 @@ echo form_input($city).'<br />';
 echo form_input($state);
 echo form_input($zip).'<br />';
 echo form_fieldset_close();
-echo form_label('Phone', 'phoe');
+echo form_label('Phone', 'phone');
 echo form_input($phone).'<br />';
 echo form_label('Fax', 'fax');
 echo form_input($fax).'<br />';
 echo form_label('Website', 'website_url');
 echo form_input($website_url).'<br />';
 echo form_fieldset('Profile Information');
+echo form_label('Profile Picture').'<br />';
+echo form_upload($upload).'<br />';
 echo form_label('About Me', 'about_me').'<br />';
 echo form_textarea($about_me).'<br />';
 echo form_label('Party Affiliation', 'party_affiliation');

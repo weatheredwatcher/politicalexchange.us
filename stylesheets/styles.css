@@ -50,17 +50,39 @@ body{
 
 #logo{
 	width:437px;
-	height:119px;
+	
 	float:right;
-	padding-top:120px;
+	padding-top:10px;
 	margin-right: 20px;
 }
 
+#logo img{
+	padding-top:50px;
+}
+
+
+#loginVideo{
+	width:600px;
+	
+	float:right;
+	padding-top:10px;
+	margin-right: 20px;
+}
 #location{
 	flaot:left;
 	margin-left:80px;
 	padding-top:80px;
 	width:267px;
+	height:225px;
+
+
+}
+
+#locationOops{
+	flaot:left;
+	margin-left:80px;
+	padding-top:80px;
+	width:367px;
 	height:225px;
 
 
@@ -267,7 +289,10 @@ td{
 	margin-right: 20px;
 }
 
-
+#logoinside img {
+	float:right;
+	padding-left:15px;
+}
 	
 
 
@@ -345,6 +370,10 @@ td{
 	border:none;
 }
 
+#contentColRight h2{
+	padding-top:10px;
+	margin-top:10px;
+}
 
 #colRight{
 	float:right;
@@ -512,3 +541,34 @@ td{
 .paging a:hover {font-weight: bold;}
 
 /* END ADVERTISEMENT */
+
+#politician{
+	
+	right:0px;
+
+	float:right;
+}
+
+#politician ul li{
+	display:inline;
+	padding: 0 0 0 30px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+#politician ul li a{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#politician ul li a:hover{
+	color: #FFFFFF;
+	text-decoration: underline;
+	
+}
+
+#politician ul li a:visited{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+	

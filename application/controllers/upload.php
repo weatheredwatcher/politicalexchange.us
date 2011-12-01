@@ -10,13 +10,13 @@ class Upload extends CI_Controller {
 	function index()
 	{
 		
-$this->load->view('upload/upload_form');
+		$this->load->view('upload/upload_form');
 	}
 	
 	function do_upload()
 		{
 			$config['upload_path'] = './uploads/';
-			//$config['allowed_types'] = 'gif|jpg|png|mp4';  
+			$config['allowed_types'] = 'gif|jpg|png|mp4';  
 			$config['max_size']	= '400000';
 			$config['remove_spaces'] = TRUE;
 			//$config['max_width']  = '1024';
@@ -28,7 +28,7 @@ $this->load->view('upload/upload_form');
 			{
 				$error = array('error' => $this->upload->display_errors());
 
-				$this->load->view('upload_form', $error);
+				$this->load->view('upload/upload_form', $error);
 			}
 			else
 			{
