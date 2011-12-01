@@ -33,10 +33,10 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message');
 	}
 	
-	public function login(){
+	public function politician(){
 	
 	
-	$this->load->view('welcome_message');
+	$this->load->view('politician');
 
 	
 	

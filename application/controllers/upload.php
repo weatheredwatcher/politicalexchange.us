@@ -33,7 +33,13 @@ class Upload extends CI_Controller {
 			else
 			{
 				$data = array('upload_data' => $this->upload->data());
-
+				$filename = $this->upload->data('file_name');
+				
+				//$this->load->model('resources_model');
+				
+				//$where = get_cookie('email');
+				//$this->db->insert_string('resources', $data);
+				
 				$this->load->view('upload/upload_success', $data);
 			}
 		}

@@ -46,7 +46,7 @@ $("#preview_01").cjImageVideoPreviewer({
     	<div id="logo">
 			<div id="politician"> <ul>
 	    <li><a href="#">Login </a></li>
-	    <li>  <a href="#">Are you a Politician? </a></li>
+	    <li>  <a href="/welcome/politician">Are you a Politician? </a></li>
 	    </ul></div>
 			<img src="images/logo.png"  alt="Political Exchange" /></div>
     	<div id="location" >

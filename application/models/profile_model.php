@@ -33,9 +33,9 @@ class Profile_model extends CI_Model {
 		$this->confirmed = 0;   //confirmed status requires campaign documents to be on file
 		$this->active = 0;      //active status requires payment to be current
 		
-		
 		$this->db->insert('profiles', $this);
 		
+		set_cookie('email', $this->email);
 	}
 	
 	function update_profile()

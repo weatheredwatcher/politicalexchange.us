@@ -26,9 +26,9 @@ class Main extends CI_Controller {
 
     foreach($browser['#poll_finder'] as $location) {
       
-      $hours = pq($location)->find('p:nth-child(6)')->getStrings();
-      $address = pq($location)->find('p:nth-child(5)')->getStrings();
-	  $name = pq($location)->find('p:nth-child(4)')->getStrings();
+      $hours = pq($location)->find('p:nth-child(5)')->getStrings();
+      $address = pq($location)->find('p:nth-child(4)')->getStrings();
+	  $name = pq($location)->find('p:nth-child(3)')->getStrings();
 	
 	  $display_hours = ltrim($hours[0],  'Polling Place Hours:');
 	  $display_address = ltrim($address[0],  'Address:');
@@ -46,8 +46,8 @@ class Main extends CI_Controller {
 		
 		
 		
-		$this->load->view('main_page', $data);
-		
+		//$this->load->view('main_page', $data);
+		$this->load->view('coming_soon', $data);
 	}
 	
 	
