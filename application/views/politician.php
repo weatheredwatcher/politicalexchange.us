@@ -252,7 +252,7 @@ $(document).ready(function() {
              	<div id="contentColLeft"> 
                 
                 <div id="topProfile">
-               	  <h2> Are You a Politician? </h2>
+               	  <h2> Are You a Candidate? </h2>
                   
 				   <?php echo $error;?>
                    <p>Sign up for our services today!</p>
@@ -265,7 +265,7 @@ $(document).ready(function() {
 						<li>Send us proof of your campaign account as instructed</li>
 						<li>Allow for verification of your payment method*</li>
 						<li>Enjoy unrestricted access to our site!</li>
-					<p>*Service is free for all residents of SC for first 3 months.</p>
+					<p>*Service is free for all candidates residing in the State of South Carolina for first 12 months.</p>
                 </div>
                 
                	 <div id="divide"></div>
