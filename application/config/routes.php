@@ -41,6 +41,13 @@
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
 
+//corp views
+$route['privacy'] = 'corp/privacy';
+$route['terms'] = 'corp/terms';
+$route['about'] = 'corp/about';
+$route['candidate'] = 'corp/candidate';
+
+
 $route['locator'] = 'welcome/login';
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
