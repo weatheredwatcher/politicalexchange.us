@@ -148,6 +148,6 @@ echo form_close();
 <div id="clear"></div>
 </div>
 
-
+<?php echo $this->load->view('_footer'); ?>
 </body>
 </html>
