@@ -9,7 +9,7 @@ class Corp extends CI_Controller {
 		
 	function index()
 	{
-	  	redirect('home', 'refresh');
+	  	echo '<h1>Corp Information Page</h1>';
 	}
 	
 	function privacy()
@@ -33,7 +33,7 @@ class Corp extends CI_Controller {
 		
 	}
 	
-	funciton candidate()
+	function candidate()
 	{
 		
 		$this->load->view('corp/candidate');

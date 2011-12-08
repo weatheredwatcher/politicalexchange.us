@@ -7,7 +7,4 @@
 //TODO grab thumbnail from video
 
 
-
-
-}
 ?>

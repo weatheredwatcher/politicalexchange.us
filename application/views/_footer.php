@@ -1,0 +1,1 @@
+<div id="footer">Copyright 2011 Political Exchange Inc | <a href="privacy"> Privacy Policy</a> |  <a href="terms">Terms of Service</a>  |  <a href="about">About PX</a>  |  <a href="contact">Contact Us</a></div>

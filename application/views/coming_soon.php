@@ -27,6 +27,7 @@ $("#preview_01").cjImageVideoPreviewer({
 </head>
 
 <body>
+
 <!-- Starting the Upper Half - - Blue Area -->
 <div id="black">
 <div id="flag"></div>
@@ -54,7 +55,6 @@ $("#preview_01").cjImageVideoPreviewer({
           
 			phpQuery::browserGet('http://www.vote411.org/pollfinder.php?address='.$address.'&address2=&city='.$city.'&state='.$state.'&zipcode='.$zip.'',$locator);	
 
-				
            
            ?>
 		<br />
@@ -88,6 +88,6 @@ $("#preview_01").cjImageVideoPreviewer({
 <div id="clear"></div>
 </div>
 
-
+<?php echo $this->load->view('_footer'); ?>
 </body>
 </html>
