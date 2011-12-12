@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	
+	background-color: #E8E4E4;
+	height:100%;
+	background-image:url(../images/hotback.jpg);
+	width:100%;
+	
+}
+
+#wrapperHot{
+	width:900px;
+	margin: 0 auto;
+	padding:20px;
+}
+
+#videoHot{
+	width:385px;
+	height:250px;
+	background-color: #3EA9F5;
+	float:left;
+	margin: 20px 0 0 0;
+	-moz-box-shadow: 5px 5px 5px #205aa3;
+ 	-webkit-box-shadow: 5px 5px 5px #205aa3;
+ 	box-shadow: 5px 5px 5px #205aa3;
+}
+
+#videoHot2{
+	width:385px;
+	height:250px;
+	background-color: #3EA9F5;
+	float:right;
+	margin: 20px 0 0 0;
+	-moz-box-shadow: 5px 5px 5px #205aa3;
+  	-webkit-box-shadow: 5px 5px 5px #205aa3;
+  	box-shadow: 5px 5px 5px #205aa3;
+}
+
+#vs{
+	width:72px;
+	height:73px;
+	margin: 125px auto 0 auto;
+	background-image:url(../images/vs.png);
+}
+	
+	#clear{
+		clear:both;
+		display:block;
+	}
+	
+	#question{
+		margin-top:30px;
+	}
+	
+	#question form textarea{
+		
+		width:100%;
+		height:100px;
+		
+	}
+	
+	#hotseat{
+		text-align:center;
+		position:relative;
+	}
+	#pxHot{
+	
+		position:absolute;
+		right:0px;
+	}

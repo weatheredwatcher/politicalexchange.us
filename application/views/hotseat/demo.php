@@ -3,13 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Hot Seat!!</title>
-<?php echo link_tag('stylesheets/hotseat.css'); ?>
+<?= link_tag('stylesheets/hotseat.css'); ?>
 </head>
 
 <body>
 
 <div id="wrapperHot">
-
 
 <div id="hotseat"><div id="pxHot"><img src="../images/px.png" width="74" height="46" alt="Political Exchange" /></div><img src="../images/hotseat.png" width="352" height="130" /></div>
 <div id="videoHot">
@@ -35,6 +34,7 @@
 			   width="385" height="250" allowfullscreen="true" allowscriptaccess="always" 
 			   id="utv37309" name="utv_n_578808" src="http://www.ustream.tv/flash/live/25993/test2" 
 			   type="application/x-shockwave-flash" />
+			
 	</object>
 </div>
 <div id="vs"></div>

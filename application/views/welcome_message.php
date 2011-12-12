@@ -138,13 +138,11 @@ echo form_close();
 
 <div id="bottomwrap">
 
-  <div id="videos">
-   <div id="featured"> <img src="images/featured.png" alt="Featured Video" width="169" height="22" /></div>
-
-        
-    
-    </div>
-</div>
+  	 <div id="videos">
+	   <div id="featured"><img src="images/featured-hot.png" width="407" height="202" alt="Hot Seat" /><img src="images/hotseat-button.png" width="169" height="72" alt="Hot Seat" style="margin-top:60px;float:right;" />
+	   </div>
+	  </div>
+	</div>
 <div id="clear"></div>
 </div>
 
