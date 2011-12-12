@@ -18,7 +18,13 @@ class Main extends CI_Controller {
 		$data['city'] = urlencode($this->input->post('city'));
 		$data['state'] = urlencode(strtoupper($this->input->post('state')));
 		$data['zip'] = urlencode($this->input->post('zip'));
- 
+
+ //pulling in the local politicians via anonymous function
+
+$city = $data['city'];
+$this->load->model('profile_model');	
+$query = $this->db->query("SELECT * FROM politicians WHERE locationID='$city'");
+$data['politicians'] = $query->result();
  //defining the locator callback    
  $data['locator'] = function($browser) {
 
@@ -46,8 +52,8 @@ class Main extends CI_Controller {
 		
 		
 		
-		//$this->load->view('main_page', $data);
-		$this->load->view('coming_soon', $data);
+		$this->load->view('main_page', $data);
+		//$this->load->view('coming_soon', $data);
 	}
 	
 	

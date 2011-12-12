@@ -122,7 +122,7 @@ $(document).ready(function() {
     	<div id="logoInside">
 			<div id="politician"> <ul>
 	    <li><a href="#">Login </a></li>
-	    <li>  <a href="#">Are you a Politician? </a></li>
+	    <li>  <a href="#">Are you a Candidate? </a></li>
 	    </ul></div>
 			<img src="<?php echo base_url();?>images/logo-icon.png"  alt="Political Exchange" width="84" height="56" /></div>
    
@@ -170,18 +170,13 @@ $(document).ready(function() {
                 <div id="topProfile">
                	  <h2> Your Representatives </h2>
                   <hr />
-                  <table  border="0" width="100%">
-  <tr>
-    <td><img src="<?php echo base_url();?>images/rep1.png" width="219" height="143" /></td>
-    <td><a class='example5' href="profile.html" title="Jim DeMint"><img src="<?php echo base_url();?>images/rep2.png" width="238" height="143" alt="example3" />	</a></td>
-    <td><img src="<?php echo base_url();?>images/rep3.png" width="180" height="143" alt="rep" /></td>
-  </tr>
-  <tr>
-    <td>Senator: Lindsey Graham</td>
-    <td>Senator: Jim DeMint</td>
-    <td>Governor: Nikki Haley</td>
-  </tr>
-</table>
+              <?php foreach($politicians as $row):?>
+					<div class='avatar'>
+				       <?=img('images/avatar.png');?><br />
+					   <?=$row->name;?>
+					</div>
+					<?php endforeach;?>
+					
                 </div>
                 
                	 <div id="divide"></div>
@@ -194,39 +189,7 @@ $(document).ready(function() {
                     
               <div align="center" >     
          <div class="sliderGallery">
-            <ul>
-                
-                <li><img src="<?php echo base_url();?>images/campaign1.png" width="94" height="128" /></li>
-                <li><img src="<?php echo base_url();?>images/campaign2.png" /></li>
-                <li><img src="<?php echo base_url();?>images/campaign1.png" width="94" height="128"/></li>
-                <li><img src="<?php echo base_url();?>images/campaign2.png" width="94" height="128" /></li>
-                <li><img src="<?php echo base_url();?>images/campaign1.png" width="94" height="128" /></li>
-                <li><img src="<?php echo base_url();?>images/campaign2.png" width="94" height="128" /></li>
-
-                <li><img src="<?php echo base_url();?>images/campaign1.png" width="94" height="128" /></li>
-                <li><img src="<?php echo base_url();?>images/campaign2.png" width="94" height="128"/></li>
-                <li><img src="<?php echo base_url();?>images/campaign1.png" width="94" height="128" /></li>
-                <li><img src="<?php echo base_url();?>images/campaign2.png" width="94" height="128" /></li>
-                <li><img src="<?php echo base_url();?>images/campaign1.png" width="94" height="128" /></li>
-                <li><img src="<?php echo base_url();?>images/campaign2.png" width="94" height="128"/></li>
-                <li><img src="<?php echo base_url();?>images/campaign1.png" width="94" height="128" /></li>
-                <li><img src="<?php echo base_url();?>images/campaign2.png" width="94" height="128" /></li>
-                <li><img src="<?php echo base_url();?>images/campaign1.png" width="94" height="128" /></li>
-
-                <li><img src="<?php echo base_url();?>images/campaign2.png" width="94" height="128" /></li>
-                <li><img src="<?php echo base_url();?>images/campaign1.png" width="94" height="128" /></li>
-                <li><img src="<?php echo base_url();?>images/campaign2.png" width="94" height="128" /></li>
-                <li><img src="<?php echo base_url();?>images/campaign1.png" width="94" height="128" /></li>
-                <li><img src="<?php echo base_url();?>images/campaign2.png" width="94" height="128" /></li>
-                <li><img src="<?php echo base_url();?>images/campaign1.png" width="94" height="128" /></li>
-                <li><img src="<?php echo base_url();?>images/campaign2.png" width="94" height="128" /></li>                    
-                <li><img src="<?php echo base_url();?>images/campaign1.png" width="94" height="128" /></li>
-                <li><img src="<?php echo base_url();?>images/campaign2.png" width="94" height="128" /></li>
-
-                <li><img src="<?php echo base_url();?>images/campaign1.png" width="94" height="128" /></li>
-                <li><img src="<?php echo base_url();?>images/campaign2.png" width="94" height="128" /></li>
-                <li><img src="<?php echo base_url();?>images/campaign1.png" width="94" height="128" /></li>                    
-            </ul>
+           <h2> Coming Soon....</h2>
           
             <div class="slider">
                 <div class="handle"></div>
