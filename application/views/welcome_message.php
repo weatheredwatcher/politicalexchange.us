@@ -48,9 +48,9 @@ $("#preview_01").cjImageVideoPreviewer({
 	    <li><a href="#">Login </a></li>
 	    <li>  <a href="/welcome/politician">Are you a Candidate? </a></li>
 	    </ul></div>
-			<img src="images/logo.png"  alt="Political Exchange" /></div>
+			<?= img("images/logo.png");?></div>
     	<div id="location" >
-        <img src="images/location.png" width="118" height="27" alt="Enter Your Location" style="margin-bottom:5px;"/>
+        <?=img("images/location.png");?>
 <?php 
 
 
@@ -139,7 +139,7 @@ echo form_close();
 <div id="bottomwrap">
 
   	 <div id="videos">
-	   <div id="featured"><img src="images/featured-hot.png" width="407" height="202" alt="Hot Seat" /><img src="images/hotseat-button.png" width="169" height="72" alt="Hot Seat" style="margin-top:60px;float:right;" />
+	   <div id="featured"><img src="http://www.politicalexchange.us/images/featured-hot.png" width="407" height="202" alt="Hot Seat" /><img src="http://www.politicalexchange.us/images/hotseat-button.png" width="169" height="72" alt="Hot Seat" style="margin-top:60px;float:right;" />
 	   </div>
 	  </div>
 	</div>

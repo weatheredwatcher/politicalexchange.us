@@ -11,11 +11,18 @@ class Profile extends CI_Controller {
 	{
 		
 			$this->load->model('profile_model');
-			
+
 			$data['query'] = $this->db->get('profiles');
-			
+
 			$this->load->view('profile/profile_index', $data);
-			
+		
+	}
+	
+	function view()
+	{
+		$profile_id = $this->uri->segment(3);
+		$data['profile_id'] = urldecode($profile_id);
+		$this->load->view('profile/profile_view', $data);
 	}
 	
 	function create(){

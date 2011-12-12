@@ -48,12 +48,17 @@ $("#preview_01").cjImageVideoPreviewer({
 	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style>
 <div id="mc_embed_signup">
- <h2 style="color:#FFFFFF; font-family:Tahoma, Geneva, sans-serif;font-weight:normal;margin-bottom:3px;">Coming Soon!</h2>
+ <h2 style="color:#FFFFFF; font-family:Tahoma, Geneva, sans-serif;font-weight:normal;margin-bottom:3px;"> Your Polling Location is:</h2>
 <form action="http://politicalexchange.us2.list-manage.com/subscribe/post?u=b975c4d16dbe8fcad821bb7f8&amp;id=3ab61eb48e" method="post"  name="mc-embedded-subscribe-form" class="validate" target="_blank">
 	<p style="font-size:15px;font-weight: bold;margin-top:0px;">
-		
+		<?php 
+          
+			phpQuery::browserGet('http://www.vote411.org/pollfinder.php?address='.$address.'&address2=&city='.$city.'&state='.$state.'&zipcode='.$zip.'',$locator);	
+
+           
+           ?>
 		<br />
-	 We are in the processing of getting ready for our launch, please sign up to find out more information!</p>
+	  We are currently in the process of updating information for your state!  Please give us your email address and we will send you updates as soon as more data is available!</p>
 	<p align="center"><input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required></p>
 	<div class="clear" align="center"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
 </form>

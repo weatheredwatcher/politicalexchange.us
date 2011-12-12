@@ -29,8 +29,8 @@ class Welcome extends CI_Controller {
 		
 		
 
-		//$this->load->view('coming_soon');
-		$this->load->view('welcome_message');
+		$this->load->view('coming_soon');
+		//$this->load->view('welcome_message');
 	}
 	
 	public function politician(){
@@ -43,7 +43,10 @@ class Welcome extends CI_Controller {
 	
 	}
 	
+public function enable(){
 	
+	$this->load->view('welcome_message');
+}	
 	
 	
 }

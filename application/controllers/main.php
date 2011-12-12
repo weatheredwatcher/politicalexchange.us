@@ -6,7 +6,7 @@ require_once 'phpQuery/phpQuery/phpQuery.php';
 class Main extends CI_Controller {
 
 	/**
-	 This is the main controller. IT handles the locator data as well as all the user interactions
+	 This is the main controller. It handles the locator data as well as all the user interactions
 	 @author David Duggins
 	 @package politicalexchange
 	 */
