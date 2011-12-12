@@ -170,17 +170,21 @@ $(document).ready(function() {
                 <div id="topProfile">
                	  <h2> Your Representatives </h2>
                   <hr />
+				<div id="representatives">
+				<ul class="avatar">
               <?php foreach($politicians as $row):?>
-					<div class='avatar'>
+					<li>
 				       <?=img('images/avatar.png');?><br />
 					   <?=$row->name;?>
-					</div>
+					</li>
 					<?php endforeach;?>
-					
+					</ul>
+					<div id="clear"> </div>
+					</div>
                 </div>
                 
                	 <div id="divide"></div>
-                
+                <div id="clear"></div>
                 <div id="middleProfile">
                	  <h2> Local Campaigns </h2>
                   <hr />
