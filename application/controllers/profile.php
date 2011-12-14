@@ -21,8 +21,20 @@ class Profile extends CI_Controller {
 	function view()
 	{
 		$profile_id = $this->uri->segment(3);
-		$data['profile_id'] = urldecode($profile_id);
+		if(ctype_digit($profile_id)){
+			$this->load->model('profile_model');
+			$query = $this->db->query("SELECT * FROM profiles WHERE id='$profile_id'");
+			$data['results'] = $query->result_array();
+			
+		}else{
+			
+			$data['name'] = urldecode($profile_id);
+			$data['avatar'] = "images/avatar.png";
+		    
+			
+		}
 		$this->load->view('profile/profile_view', $data);
+		
 	}
 	
 	function create(){
