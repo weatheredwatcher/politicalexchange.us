@@ -40,9 +40,15 @@ $data['politicians'] = $query->result();
 	  $display_address = ltrim($address[0],  'Address:');
 	  $display_name = ltrim($name[0],  'Name:');
 	  
-	  echo $display_name . '<br />';
-	  echo $display_address . '<br />';
-	  echo $display_hours . '<br />';
+	  
+    echo ("<h2 align='center'> $display_name </h2>
+	                    <p align='center'> $display_address <br />
+	                    $display_hours </p>");
+
+
+
+	
+	 
 
     }
     

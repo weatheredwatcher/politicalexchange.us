@@ -4,9 +4,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Political Exchange</title>
 
-<?php echo('<link href="'.base_url().'stylesheets/styles.css" rel="stylesheet" type="text/css" />'); ?>
-<script src="<?=base_url()?>javascript/jquery.js" type="text/javascript"> </script>
-<script src="<?=base_url()?>javascript/jquery.cj-image-video-previewer.js" type="text/javascript"> </script>
+<?=link_tag('stylesheets/styles.css');?>
+<?=link_tag('javascript/fancybox/jquery.fancybox-1.3.4.css');?>
+
+<!-- updated to jQ 1.2.6 and UI 1.5.2 2008-11-28 -->
+    <script src="http://www.politicalexchange.us/javascript/jquery-1.6.2.min.js" type="text/javascript" charset="utf-8"></script>
+   
+   <script src="http://www.politicalexchange.us/javascript/fancybox/jquery.fancybox-1.3.4.js" type="text/javascript" charset="utf-8"></script>
 
 <script type="text/javascript">
 
@@ -29,6 +33,16 @@ $("#preview_01").cjImageVideoPreviewer({
 	   
 	
 	}
+	
+	$(document).ready(function() {
+
+		/* This is basic - uses default settings */
+
+		$(".fancybox").fancybox();
+
+
+
+	});
 </script>
 
 </head>

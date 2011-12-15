@@ -16,6 +16,7 @@
 		$email = $row['email'];
 		$campaign_name = $row['campaign_name'];
 		$address1 = $row['address1'];
+		if($row['avatar_id'] == 0){$avatar = "/images/avatar.png";}else{$avatar = $row['avatar_id'];}
 		$address2 = $row['address2'];
 		$city = $row['city'];
 		$state = $row['state'];
@@ -33,7 +34,7 @@
 	
 	
 }
-else { $msg = "<h2><span style='color:black;'>Is this you?  <a href='profile/create'>Click to setup an account</a>.</span></h2>";}
+else { $msg = "<h2><span style='color:black; text-align:center;'>Is this you?  <a href='profile/create'>Click to setup an account</a>.</span></h2>";}
 
 ?>
           <div id="profile">

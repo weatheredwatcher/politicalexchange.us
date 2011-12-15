@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 	/* This is basic - uses default settings */
 	
-	$("a#fancybox").fancybox();
+	$(".fancybox").fancybox();
 	
 	
 	
@@ -63,8 +63,7 @@ $(document).ready(function() {
                 <div id="topProfile">
                	  <h2>Profiles </h2>
                   <?php foreach($query->result() as $row):?>
-					
-                <?="<a id='fancybox' href='http://www.politicalexchange.us/profile/view/$row->id'>$row->name</a>"; ?><br />
+					<?=anchor("/profile/view/$row->id", $row->name, array('class' => 'fancybox fancybox.iframe'));?><br />
 				<?php endforeach;?>
                 </div>
                 

@@ -99,7 +99,7 @@ $(document).ready(function() {
 
 	/* This is basic - uses default settings */
 	
-	$("a#fancybox").fancybox();
+	$(".fancybox").fancybox();
 	
 	
 	
@@ -123,49 +123,40 @@ $(document).ready(function() {
 	
 
     	<div id="logoInside">
+	<img src="<?php echo base_url();?>images/logo-icon.png"  alt="Political Exchange" width="84" height="56" />
 			<div id="politician"> <ul>
 	    <li><a href="#">Login </a></li>
 	    <li>  <a href="#">Are you a Candidate? </a></li>
 	    </ul></div>
-			<img src="<?php echo base_url();?>images/logo-icon.png"  alt="Political Exchange" width="84" height="56" /></div>
+			</div>
    
 		
         <div id="columnwrap">
-      		 <div id="colRight">
-             	<div id="contentColRight">
+      		
+			  <div id="colRight">
+	           	<div id="contentColRight">
+	 <p align="center"><img src="images/polling.png" width="78" height="80" alt="Polling">
+			<?php phpQuery::browserGet('http://www.vote411.org/pollfinder.php?address='.$address.'&address2=&city='.$city.'&state='.$state.'&zipcode='.$zip.'',$locator); ?>
+	 
+	</div>
 
 
-<div class="main_view">
-    <div class="window">
-        <div class="image_reel">
-            <a href="#"><img src="<?php echo base_url();?>images/ad2.png" alt="" /></a>
-            <a href="#"><img src="<?php echo base_url();?>images/ad3.png" alt="" /></a>
-            <a href="#"><img src="<?php echo base_url();?>images/ad1.png" alt="" /></a>
-       
-        </div>
-    </div>
-    <div class="paging">
-        <a href="#" rel="1"></a>
-        <a href="#" rel="2"></a>
-        <a href="#" rel="3"></a>
 
-    </div>
-</div>
+	              <div id="ads">
 
 
-                  <p></p><h2> Poll Locator </h2>
-                  <?php 
-                  
-					phpQuery::browserGet('http://www.vote411.org/pollfinder.php?address='.$address.'&address2=&city='.$city.'&state='.$state.'&zipcode='.$zip.'',$locator);	
+	         <img src="images/ad2.png" alt="" width="280" />
+	         <img src="images/ad3.png" alt="" width="280" />
+	         <img src="images/ad1.png" alt="" width="280" />
 
-						
-                   
-                   ?>
-                  <hr />
-                
-                
-                </div>
-             </div>
+
+	    </div>
+	</div>
+
+
+	   
+
+           
              
    			 <div id="colLeft">
              	<div id="contentColLeft"> 
@@ -179,8 +170,9 @@ $(document).ready(function() {
 					<li>
 				       <?=img('images/avatar.png');?><br />
 				
-					<?php $href="profile/view/".urlencode("$row->name"); ?>
-					  <?="<a id='fancybox' href='http://www.politicalexchange.us/$href'>$row->name</a>"; ?>
+					
+					<?php $href="profile/view/".rawurlencode("$row->name"); ?>
+					  <?=anchor($href, $row->name, array('class' => 'fancybox fancybox.iframe'));?>
 					</li>
 					<?php endforeach;?>
 					</ul>
@@ -191,40 +183,7 @@ $(document).ready(function() {
                	 <div id="divide"></div>
                 <div id="clear"></div>
                 <div id="middleProfile">
-               	  <h2> Local Campaigns </h2>
-                  <hr />
-                    
-                    
-                    
-              <div align="center" >     
-         <div class="sliderGallery">
-           <h2> Coming Soon....</h2>
-          
-            <div class="slider">
-                <div class="handle"></div>
-             <!-- <span class="slider-lbl1">Wi-Fi</span>
-                <span class="slider-lbl3">Macs</span>
-                <span class="slider-lbl4">Applications</span>
-                <span class="slider-lbl5">Servers</span>
-            </div> -->
-         
-        </div>
-        </div>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-              
-                
-                
-                </div>
+               	 
                 	
           			
                </div>
@@ -242,8 +201,8 @@ $(document).ready(function() {
 </div>
 
 <!-- End Blue  -->
+<div id="clear"></div>
 
-
-
+<?php echo $this->load->view('_footer'); ?>
 </body>
 </html>
