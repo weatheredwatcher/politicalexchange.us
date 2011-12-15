@@ -9,7 +9,7 @@
     <script src="http://www.politicalexchange.us/javascript/jquery-1.6.2.min.js" type="text/javascript" charset="utf-8"></script>
    
    <script src="http://www.politicalexchange.us/javascript/fancybox/jquery.fancybox-1.3.4.js" type="text/javascript" charset="utf-8"></script>
-    
+
     <script type="text/javascript" charset="utf-8">
         window.onload = function () {
             var container = $('div.sliderGallery');
@@ -94,19 +94,12 @@ $(document).ready(function() {
 	});	
 	
 });
-
-$(document).ready(function() {
-
-	/* This is basic - uses default settings */
-	
-	$(".fancybox").fancybox();
-	
-	
-	
-});
-
-
 </script>
+
+
+
+
+
 
 
 
@@ -122,55 +115,48 @@ $(document).ready(function() {
 <div id="contentwrapInside">
 	
 
-    	<div id="logoInside">
-	<img src="<?php echo base_url();?>images/logo-icon.png"  alt="Political Exchange" width="84" height="56" />
-			<div id="politician"> <ul>
-	    <li><a href="#">Login </a></li>
-	    <li>  <a href="#">Are you a Candidate? </a></li>
-	    </ul></div>
-			</div>
+    	<div id="logoInside"><img src="images/logo-icon.png"  alt="Political Exchange" width="84" height="56" />
+           <div id="politician"> <ul>
+    <li><a href="#">My Account </a></li>
+    <li>  <a href="#">Contact Us </a></li>
+    </ul></div>
+        
+        </div>
    
 		
-        <div id="columnwrap">
-      		
-			  <div id="colRight">
-	           	<div id="contentColRight">
-	 <p align="center"><img src="images/polling.png" width="78" height="80" alt="Polling">
-			<?php phpQuery::browserGet('http://www.vote411.org/pollfinder.php?address='.$address.'&address2=&city='.$city.'&state='.$state.'&zipcode='.$zip.'',$locator); ?>
-	 
-	</div>
+    <div id="columnwrap">
+    
+    
+   		  <div id="colRight">
+   		  		<div id="contentColRight">
+					<p align="center"><img src="images/polling.png" width="78" height="80" alt="Polling">
+							<?php phpQuery::browserGet('http://www.vote411.org/pollfinder.php?address='.$address.'&address2=&city='.$city.'&state='.$state.'&zipcode='.$zip.'',$locator); ?>
+	
+	
+				</div> <!-- end contentColRight-->
+				<div id="ads">
+			         <img src="images/ad2.png" alt="" width="280" />
+			         <img src="images/ad3.png" alt="" width="280" />
+			         <img src="images/ad1.png" alt="" width="280" />
+			    </div>
 
-
-
-	              <div id="ads">
-
-
-	         <img src="images/ad2.png" alt="" width="280" />
-	         <img src="images/ad3.png" alt="" width="280" />
-	         <img src="images/ad1.png" alt="" width="280" />
-
-
-	    </div>
-	</div>
-
-
-	   
-
-           
+   		  </div>
+                
+    
+        
              
    			 <div id="colLeft">
-             	<div id="contentColLeft"> 
-                
-                <div id="topProfile">
+           	   <div id="contentColLeft">
+           	   	<div id="topProfile">
                	  <h2> Your Representatives </h2>
-                  <hr />
+                  
 				<div id="representatives">
 				<ul class="avatar">
               <?php foreach($politicians as $row):?>
 					<li>
 				       <?=img('images/avatar.png');?><br />
-				
-					
+
+
 					<?php $href="profile/view/".rawurlencode("$row->name"); ?>
 					  <?=anchor($href, $row->name, array('class' => 'fancybox fancybox.iframe'));?>
 					</li>
@@ -179,15 +165,16 @@ $(document).ready(function() {
 					<div id="clear"> </div>
 					</div>
                 </div>
-                
+
                	 <div id="divide"></div>
                 <div id="clear"></div>
                 <div id="middleProfile">
-               	 
-                	
-          			
+
+
+
                </div>
-  		</div>
+
+           	   </div>
         
   </div>
 
@@ -197,12 +184,17 @@ $(document).ready(function() {
 
 
 </div>
-</div>
+<div id="clear"></div>
 </div>
 
-<!-- End Blue  -->
 <div id="clear"></div>
 
-<?php echo $this->load->view('_footer'); ?>
+ <?php echo $this->load->view('_footer'); ?></div>
+
+
+
+<!-- End Blue  -->
+
+
 </body>
 </html>
