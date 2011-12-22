@@ -5,11 +5,10 @@
 <?=link_tag('stylesheets/styles.css');?>
 <?=link_tag('javascript/fancybox/jquery.fancybox-1.3.4.css');?>
 
-<!-- updated to jQ 1.2.6 and UI 1.5.2 2008-11-28 -->
-    <script src="http://www.politicalexchange.us/javascript/jquery-1.6.2.min.js" type="text/javascript" charset="utf-8"></script>
-   
-   <script src="http://www.politicalexchange.us/javascript/fancybox/jquery.fancybox-1.3.4.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.politicalexchange.us/javascript/jquery-1.6.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.politicalexchange.us/javascript/fancybox/jquery.fancybox-1.3.4.js" type="text/javascript" charset="utf-8"></script>
 
+    
     <script type="text/javascript" charset="utf-8">
         window.onload = function () {
             var container = $('div.sliderGallery');
@@ -29,16 +28,6 @@
                 }
             });
         };
-
-		$(document).ready(function() {
-
-			/* This is basic - uses default settings */
-
-			$(".fancybox").fancybox();
-
-
-
-		});
     </script>
 
 <!-- THIS SCRIPT IS FOR THE ADVERTISEMENT -->
@@ -108,16 +97,19 @@ $(document).ready(function() {
 
 
 
+<!-- FOR NIVO SLIDER -->
 
-
-
+<link rel="stylesheet" href="../nivo-slider/themes/default/default.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../nivo-slider/themes/pascal/pascal.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../nivo-slider/themes/orman/orman.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../nivo-slider/nivo-slider.css" type="text/css" media="screen" />
 
 
 </head>
 
 <body id="sub">
 	<!-- Here is the code for talking heads video -->
-	<script type="text/javascript" src="http://www.politicalexchange.us/wthvideo/wthvideo4.js"></script>
+	<script type="text/javascript" src="http://www.politicalexchange.us/wthvideo/wthvideo2.js"></script>
 	<!-- End of Talking Heads -->
 <!-- Starting the Upper Half - - Blue Area -->
 
@@ -128,66 +120,37 @@ $(document).ready(function() {
 <div id="contentwrapInside">
 	
 
-    	<div id="logoInside"><img src="images/logo-icon.png"  alt="Political Exchange" width="84" height="56" />
-           <div id="politician">
-        <?=$this->load->view('_topmenu');?></div>
+    	<div id="logoInside"><img src="../images/logo-icon.png"  alt="Political Exchange" width="84" height="56" />
+           <div id="politician"> <?=$this->load->view('_topmenu'); ?></div>
+        
+        </div>
+        
+        <div class="slider-wrapper theme-default">
+            <div class="ribbon"></div>
+            <div id="slider" class="nivoSlider">
+                <img src="../images/banner1.jpg" alt="" width="1024" />
+         
+                <img src="../images/banner2.jpg" alt="" data-transition="slideInLeft" />
+                <img src="../images/banner3.jpg" alt=""  />
+            </div>
+           <!-- <div id="htmlcaption" class="nivo-html-caption">
+                <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>.
+            </div>  -->
         </div>
    
 		
-    <div id="columnwrap">
-    
-    
-   		  <div id="colRight">
-   		  		
-				<div id="ads">
-			         <img src="images/ad2.png" alt="" width="280" />
-			         <img src="images/ad3.png" alt="" width="280" />
-			         <img src="images/ad1.png" alt="" width="280" />
-			    </div>
-
-   		  </div>
-                
-    
-        
-             
-   			 <div id="colLeft">
-           	   <div id="contentColLeft">
-           	   	<div id="topProfile">
-               	  <h2> About Us </h2>
-                  
-				<div id="representatives">
-						<p>The idea for PX began during a local Sheriff’s race in South Carolina in the Summer of 2009. 
-						One candidate had the desire to connect with every eligible voter, but due to an ever-growing 
-						electorate, the ability to reach each voter depended largely on the size of a campaign account. 
-						This candidate realized the potential of internet and social media for affordably connecting a 
-						candidate to his or her constituency, thus leveling the “playing field” and allowing every voter 
-						to truly know candidates running for public office. </p>
-						<p>That idea was shared with a few close friends, all of whom steadfastly believe in real political 
-						transparency. After almost two years of hard work and planning, the idea became reality. Political 
-						Exchange is now the only place every candidate in every race in America can go to directly connect 
-						with every voter. PX is also the only place voters can go to truly see who the candidates are and 
-						what they really believe. </p>
-
-						<p>FAMILY:	We at Political Exchange have a strong belief in family. Family is at the very Core of 
-						our Country. Most of us have already begun building families of our own. Our workplace environment 
-						is structured so that we provide premium customer service to every candidate or constituent member, 
-						as well as strengthen and nurture every employee’s own family. We think of each other as family and 
-						treat each other as such. We gladly extend an open invitation, into the PX family, to everyone who 
-						desires and demands truth and freedom of ideas in the political process of Our Republic.</p>   
-			
-					<div id="clear"> </div>
-					</div>
-                </div>
-
-               	 <div id="divide"></div>
-                <div id="clear"></div>
-                <div id="middleProfile">
-
-
-
-               </div>
-
-           	   </div>
+        <div id="columnwrap">
+          <div id="colLeftFull">
+       	    <div id="contentColLeft">
+            <div id="buttonsDemo"><p><img src="../images/hot-seat-demo.png" width="210" height="95"><img src="../images/hot-seat-schedule.png" width="297" height="99"></p></div>
+       	      
+              <div id="textRight">
+              <h2>Welcome to the PX Hot Seat </h2>
+       	      <p>the only place on the web to find live, one on one debates from the biggest names in politics. Click on the PX hot seat demo link at the bottom of the page to see a demo of the kind of excitement you can expect from The Political Exchange. </p>
+       	      <p>Candidates are issuing challenges daily, so make sure to stay up to date on the debates for the races that matter to you!  As always, thank you for choosing The Political Exchange. </p>
+              </div>
+       	      
+       	    </div>
         
   </div>
 
@@ -198,17 +161,25 @@ $(document).ready(function() {
 
 </div>
 <div id="clear"></div>
+
+
+
+
 </div>
-
-<div id="clear"></div>
-
- <?php echo $this->load->view('_footer'); ?></div>
+<div id="bottomAds"><img src="../images/ad1.png" width="24%" height="218" alt="Advertisement"> <img src="../images/ad2.png" width="24%" height="218" alt="Advertisement"> <img src="../images/ad3.png" width="24%" height="218" alt="Advertisement"> <img src="../images/ad3.png" width="24%" height="218" alt="Advertisement" style="padding-right:0px;"></div>
+<?=$this->load->view('_footer');?>
 
 
+</div>
 
 <!-- End Blue  -->
 
-
+<script type="text/javascript" src="../nivo-slider/demo/scripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../nivo-slider/jquery.nivo.slider.pack.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
 </body>
 </html>
-

@@ -232,6 +232,9 @@ $(document).ready(function() {
 </head>
 
 <body id="sub">
+	<!-- Here is the code for talking heads video -->
+	<script type="text/javascript" src="http://www.politicalexchange.us/wthvideo/wthvideo3.js"></script>
+	<!-- End of Talking Heads -->
 <!-- Starting the Upper Half - - Blue Area -->
 
 <div id="flagInside"></div>
@@ -241,7 +244,11 @@ $(document).ready(function() {
 <div id="contentwrapInside">
 	
 
-    	<div id="logoInside"><img src="<?php echo base_url();?>images/logo-icon.png"  alt="Political Exchange" width="84" height="56" /></div>
+    	<div id="logoInside">
+	<img src="<?php echo base_url();?>images/logo-icon.png"  alt="Political Exchange" width="84" height="56" />
+			<div id="politician">
+	        <?=$this->load->view('_topmenu');?></div>
+	</div>
    
 		
         <div id="columnwrap">

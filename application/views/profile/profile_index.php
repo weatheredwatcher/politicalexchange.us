@@ -50,7 +50,10 @@ $(document).ready(function() {
 <div id="contentwrapInside">
 	
 
-    	<div id="logoInside"><img src="<?php echo base_url();?>images/logo-icon.png"  alt="Political Exchange" width="84" height="56" /></div>
+    	<div id="logoInside"><a href="/home"><img src="../images/logo-icon.png"  alt="Political Exchange" width="84" height="56" /></a>
+			<div id="politician">
+	        <?=$this->load->view('_topmenu');?></div>
+	</div>
    
 		
         <div id="columnwrap">

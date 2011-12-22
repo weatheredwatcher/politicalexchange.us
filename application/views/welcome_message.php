@@ -14,25 +14,6 @@
 
 <script type="text/javascript">
 
-$("#preview_01").cjImageVideoPreviewer({
-// provide an array of your thumbnail images
-"images": [
-'images/obama1.png',
-'images/obama2.png',
-'images/obama3.png',
-'images/obama4.png',
-'images/obama5.png'
-
-	],
-	"delay": 100, // obviously this is a crazy fast amount
-	"showProgress": false // turn off the progress bar
-	});
-	
-	function form_onClick(){
-	
-	   
-	
-	}
 	
 	$(document).ready(function() {
 
@@ -43,11 +24,30 @@ $("#preview_01").cjImageVideoPreviewer({
 
 
 	});
+	
+	function form_onBlur(){
+		
+	var myString = $('input[name=city]').val();
+		
+		switch (myString) {
+
+		case "Columbia"://, "Charleston", "FountainInn", "Greer", "Honea Path", "Irmo", "North Charleston", "North Augusta", "Summerville", "Ware Shoals", "Yemassee":
+		    var myCounty = prompt ("Please enter your County:");
+		    
+		    $('input:hidden').val(myCounty);
+		    break;
+
+
+		}
+	}
 </script>
 
 </head>
 
 <body>
+	<!-- Here is the code for talking heads video -->
+	<script type="text/javascript" src="http://www.politicalexchange.us/wthvideo/wthvideo.js"></script>
+	<!-- End of Talking Heads -->
 <!-- Starting the Upper Half - - Blue Area -->
 <div id="black">
 <div id="flag"></div>
@@ -58,10 +58,16 @@ $("#preview_01").cjImageVideoPreviewer({
 	
     <div id="stars">
     	<div id="logo">
-			<div id="politician"> <ul>
-	    <li><a href="#">Login </a></li>
-	    <li>  <a href="/welcome/politician">Are you a Candidate? </a></li>
-	    </ul></div>
+			<div id="politician">
+				
+				<ul>
+				<li><?=anchor('acount', 'My Account');?></li>
+				<li>  <?=anchor('candidate', 'Candidates');?></li>
+				<li>  <?=anchor('contact', 'Contact Us');?></li>
+				<li>  <?=anchor('about', 'About Us');?></li>
+				<li>  <?=anchor('hotseat', 'HotSeat');?></li>
+				</ul>
+			</div>
 			<?= img("images/logo.png");?></div>
     	<div id="location" >
         <?=img("images/location.png");?>
@@ -86,9 +92,14 @@ $city = array(
               'maxlength'   => '100',
               'size'        => '50',
               'onClick'     => 'form_onCLick()',
-              'onFocus'     => 'form_onFocus()'
+              'onBlur'     => 'form_onBlur()'
                );
 
+$county = array(
+			   'name'        => 'county',
+               'id'          => 'home',
+		       'value'       => 'county',
+                );
 $state = array(
               'name'        => 'state',
               'id'          => 'home',
@@ -121,6 +132,7 @@ $submit = array(
 echo form_open('main');
 echo form_input($address);
 echo form_input($city);
+echo form_hidden($county);
 echo form_input($state);
 echo form_input($zip);
 echo form_button($submit);
@@ -153,7 +165,8 @@ echo form_close();
 <div id="bottomwrap">
 
   	 <div id="videos">
-	   <div id="featured"><img src="http://www.politicalexchange.us/images/featured-hot.png" width="407" height="202" alt="Hot Seat" /><img src="http://www.politicalexchange.us/images/hotseat-button.png" width="169" height="72" alt="Hot Seat" style="margin-top:60px;float:right;" />
+	   <div id="featured"><img src="http://www.politicalexchange.us/images/featured-hot.png" width="407" height="202" alt="Hot Seat" />
+		<a href="/hotseat/hotseat_about"><img src="http://www.politicalexchange.us/images/hotseat-button.png" width="169" height="72" alt="Hot Seat" style="margin-top:60px;float:right;" /></a>
 	   </div>
 	  </div>
 	</div>

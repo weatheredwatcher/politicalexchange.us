@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Politicians_model extends CI_Model {
+class City_level_model extends CI_Model {
 
 	function __construct()
 	{

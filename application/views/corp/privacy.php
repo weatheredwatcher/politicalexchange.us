@@ -2,8 +2,7 @@
 
 <!-- Begin Privacy Policy -->
 <h1>PRIVACY POLICY</h1>
-<br />
-<br />
+
   	<h2>A. Introduction</h2>
 		<p>The goal of the POLITICAL EXCHANGE Website (&quot;the PX Website&quot;) is NOT to keep the personal beliefs, feelings, and ideas of Candidates (defined in the Terms of Use) private from their Constituents (defined in the Terms of Use). However, while the PX Website strives to bring Candidates and Constituents &quot;face to face&quot;, we know that the privacy of certain personal information is absolutely necessary. As such, we provide this privacy statement explaining our online information practices and about the way your information is collected and used at the PX Website, and among a POLITICAL EXCHANGE network of affiliated websites (the &quot;PX Network&quot;), which includes any sites or services owned, operated or offered by or on behalf of The Political Exchange Corporation or its subsidiaries (collectively &quot;Political Exchange&quot;). Political Exchange may share information among its subsidiaries or sites that it owns or controls, but is always protected under the terms of this Privacy Policy.</p>
 		<p>The PX Website may contain links to third-party sites. Once you enter another Web site (whether through an advertisement, service, or content link), be aware that Political Exchange is not responsible for the privacy practices of these other sites. We encourage you to look for and review the privacy statements of each and every Web site that you visit through a link or advertisement in the PX Network. </p>

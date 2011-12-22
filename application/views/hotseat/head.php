@@ -5,11 +5,10 @@
 <?=link_tag('stylesheets/styles.css');?>
 <?=link_tag('javascript/fancybox/jquery.fancybox-1.3.4.css');?>
 
-<!-- updated to jQ 1.2.6 and UI 1.5.2 2008-11-28 -->
-    <script src="http://www.politicalexchange.us/javascript/jquery-1.6.2.min.js" type="text/javascript" charset="utf-8"></script>
-   
-   <script src="http://www.politicalexchange.us/javascript/fancybox/jquery.fancybox-1.3.4.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.politicalexchange.us/javascript/jquery-1.6.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.politicalexchange.us/javascript/fancybox/jquery.fancybox-1.3.4.js" type="text/javascript" charset="utf-8"></script>
 
+    
     <script type="text/javascript" charset="utf-8">
         window.onload = function () {
             var container = $('div.sliderGallery');
@@ -29,16 +28,6 @@
                 }
             });
         };
-
-		$(document).ready(function() {
-
-			/* This is basic - uses default settings */
-
-			$(".fancybox").fancybox();
-
-
-
-		});
     </script>
 
 <!-- THIS SCRIPT IS FOR THE ADVERTISEMENT -->
@@ -107,12 +96,6 @@ $(document).ready(function() {
 </script>
 
 
-
-
-
-
-
-
 </head>
 
 <body id="sub">
@@ -124,80 +107,42 @@ $(document).ready(function() {
 
 <div id="contentwrapInside">
 	
-
-    	<div id="logoInside">
-        <?=$this->load->view('_topmenu');?>
-        </div>
-   
-		
-    <div id="columnwrap">
-    
-    
-   		  <div id="colRight">
-   		  		<div id="contentColRight">
-					<p align="center"><img src="images/polling.png" width="78" height="80" alt="Polling">
-							<?php phpQuery::browserGet('http://www.vote411.org/pollfinder.php?address='.$address.'&address2=&city='.$city.'&state='.$state.'&zipcode='.$zip.'',$locator); ?>
-	
-	
-				</div> <!-- end contentColRight-->
-				<div id="ads">
-			         <img src="images/ad2.png" alt="" width="280" />
-			         <img src="images/ad3.png" alt="" width="280" />
-			         <img src="images/ad1.png" alt="" width="280" />
-			    </div>
-
-   		  </div>
-                
-    
+<?php
+$image_properties = array(
+          'src' => 'images/logo-icon.png',
+          'alt' => 'Political Exchange',
+          'width' => '84',
+          'height' => '56'
+);
+?>
+    	<div id="logoInside"><?=img($image_properties); ?>
+           <div id="politician"> <?=$this->load->view('_topmenu'); ?></div>
         
-             
-   			 <div id="colLeft">
-           	   <div id="contentColLeft">
-           	   	<div id="topProfile">
-               	  <h1> Your Representatives </h1>
-                  <div id="divide"></div>
-				<div id="representatives">
-					<h2>City Level</h2>
-				<ul class="avatar">
-              <?php foreach($politicians as $row):?>
-					<li>
-				       <?=img('images/avatar.png');?><br />
-
-
-					<?php $href="profile/view/".rawurlencode("$row->name"); ?>
-					  <?=anchor($href, $row->name, array('class' => 'fancybox fancybox.iframe'));?><br />
-					<?=$row->title?>
-					</li>
-					<?php endforeach;?>
-					</ul>
-					<div id="divide"></div>
-					<h2>County Level</h2>
-							<ul class="avatar">
-			              <?php foreach($county_level as $row):?>
-								<li>
-							       <?=img('images/avatar.png');?><br />
-
-
-								<?php $href="profile/view/".rawurlencode("$row->name"); ?>
-								  <?=anchor($href, $row->name, array('class' => 'fancybox fancybox.iframe'));?><br />
-								<?=$row->position?>
-								</li>
-								<?php endforeach;?>
-								</ul>
-							
-					<div id="clear"> </div>
+        </div>
+       
+		
+        <div id="columnwrap">
+          <div id="colLeftFull">
+       	    <div id="contentColLeft">
+            		<div id="broadcasterContent" style="width:760px;height:455px;" align="center">
+					<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="100%" height="100%" id="utv596796">
+					<param name="flashvars" value="sid=25b0346fed2ad640406b8a207812ec06&cid=25993%2Ftest<?=$head_id;?>"/>
+					<param name="allowfullscreen" value="true"/>
+					<param name="allowscriptaccess" value="always"/>
+					<param name="movie" value="http://www.ustream.tv/flash/broadcaster.swf?r=api&v=5"/>
+					<embed flashvars="sid=25b0346fed2ad640406b8a207812ec06&cid=25993%2Ftest<?=$head_id;?>" width="100%" height="100%" 
+					allowfullscreen="true" allowscriptaccess="always" id="utv596796" name="utv_n_193018" 
+					src="http://www.ustream.tv/flash/broadcaster.swf?r=api&v=5" type="application/x-shockwave-flash" />
+					</object>
 					</div>
-                </div>
-
-               	 <div id="divide"></div>
-                <div id="clear"></div>
-                <div id="middleProfile">
-
-
-
-               </div>
-
-           	   </div>
+					<script type="text/javascript">
+					function resize(w,h){
+						if ( w > 0 ){document.getElementById("broadcasterContent").style.width = w + "px";}if ( h > 0 ){
+							document.getElementById("broadcasterContent").style.height = h + "px";}return true;}
+							</script>
+			
+       	      
+       	    </div>
         
   </div>
 
@@ -208,16 +153,25 @@ $(document).ready(function() {
 
 </div>
 <div id="clear"></div>
+
+
+
+
 </div>
-
-<div id="clear"></div>
-
- <?php echo $this->load->view('_footer'); ?></div>
+<div id="bottomAds"><img src="../../images/ad1.png" width="24%" height="218" alt="Advertisement"> <img src="../../images/ad2.png" width="24%" height="218" alt="Advertisement"> <img src="../../images/ad3.png" width="24%" height="218" alt="Advertisement"> <img src="../../images/ad3.png" width="24%" height="218" alt="Advertisement" style="padding-right:0px;"></div>
+<?=$this->load->view('_footer');?>
 
 
+</div>
 
 <!-- End Blue  -->
 
-
+<script type="text/javascript" src="../nivo-slider/demo/scripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../nivo-slider/jquery.nivo.slider.pack.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
 </body>
 </html>

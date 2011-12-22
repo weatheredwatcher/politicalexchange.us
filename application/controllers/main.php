@@ -18,13 +18,23 @@ class Main extends CI_Controller {
 		$data['city'] = urlencode($this->input->post('city'));
 		$data['state'] = urlencode(strtoupper($this->input->post('state')));
 		$data['zip'] = urlencode($this->input->post('zip'));
-
+        $county = urlencode($this->input->post('county'));
  //pulling in the local politicians via anonymous function
 
 $city = $data['city'];
 $this->load->model('profile_model');	
-$query = $this->db->query("SELECT * FROM politicians WHERE locationID='$city'");
+$query = $this->db->query("SELECT * FROM city_level WHERE locationID='$city'");
 $data['politicians'] = $query->result();
+if ($county == "county"){
+$query2 = $this->db->query("SELECT county FROM cities WHERE name='$city'");
+//$start = $query2->result_array();
+//$str = implode(",", $start);
+//$data['counties'] = (explode(",", $str));
+} 
+	$county_query = $this->db->query("SELECT * FROM county_level WHERE county ='$county'");
+    $data['county_level'] = $county_query->result();
+
+
  //defining the locator callback    
  $data['locator'] = function($browser) {
 
@@ -60,6 +70,26 @@ $data['politicians'] = $query->result();
 		
 		$this->load->view('main_page', $data);
 		//$this->load->view('coming_soon', $data);
+	}
+	
+	public function testor()
+	{
+		
+		$city = "Columbia";
+		$this->load->model('profile_model');	
+		$query = $this->db->query("SELECT * FROM city_level WHERE locationID='$city'");
+		$data['politicians'] = $query->result();
+		$query2 = $this->db->query("SELECT county FROM cities WHERE name='$city'");
+
+		$start = $query2->result_array();
+		print_r ($start);
+		$str = implode(",", $start);
+		print_r ($str);
+		$counties = (explode(",", $str));
+		
+		foreach($counties as $county){
+			echo ("<h2>$county</h2>");
+		}
 	}
 	
 	

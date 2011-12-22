@@ -34,7 +34,7 @@
 	
 	
 }
-else { $msg = "<h2><span style='color:black; text-align:center;'>Is this you?  <a href='profile/create'>Click to setup an account</a>.</span></h2>";}
+else { $msg = "<h2 align='center'><span style='color:black;'>Is this you?  <a href='profile/create'>Click to setup an account</a>.</span></h2>";}
 
 ?>
           <div id="profile">
@@ -47,8 +47,8 @@ else { $msg = "<h2><span style='color:black; text-align:center;'>Is this you?  <
                   <table  border="0">
   <tr>
     <td valign="top" class="bordright"><?=img($avatar);?>
-    <p> Online Last:  <strong>August 22, 2011 </strong><br />
-   Next Debate:  <strong>August 29, 2011 </strong></p>
+    <p> Online Last:  <strong></strong><br />
+   Next Debate:  <strong></strong></p>
     
     </td>
     <td valign="top"> <h2> <?=$name;?> </h2><table width="100%" border="0">
@@ -127,7 +127,7 @@ else { $msg = "<h2><span style='color:black; text-align:center;'>Is this you?  <
                     
               <div align="center" >     
          <div class="sliderGallery">
-            
+            No Videos have been Uploaded Yet.
           
             <div class="slider">
                

@@ -40,13 +40,14 @@
 
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
-
+$route['home'] = "welcome";
 //corp views
-$route['privacy'] = 'corp/privacy';
-$route['terms'] = 'corp/terms';
-$route['about'] = 'corp/about';
-$route['candidate'] = 'corp/candidate';
-
+$route['privacy'] = '/corp/privacy';
+$route['terms'] = '/corp/terms';
+$route['about'] = '/corp/about';
+$route['candidate'] = '/welcome/politician';
+$route['hotseat'] = '/hotseat/hotseat_about';
+$route['enable'] = '/welcome/enable';
 
 $route['locator'] = 'welcome/login';
 /* End of file routes.php */
