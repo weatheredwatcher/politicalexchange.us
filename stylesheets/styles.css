@@ -4,10 +4,16 @@
 body{
 	margin: 0px;
 	background-color:#fcfdfd;
+	font-family:Arial, Helvetica, sans-serif;
 	
 
 	
 	
+}
+
+h1{
+	font-size:24px;
+		color:#5194ff;
 }
 
 #black{
@@ -49,8 +55,8 @@ body{
 }
 
 #logo{
-	width:437px;
-	
+width:50%;
+	text-align:right;
 	float:right;
 	padding-top:10px;
 	margin-right: 20px;
@@ -69,7 +75,7 @@ body{
 	margin-right: 20px;
 }
 #location{
-	flaot:left;
+	float:left;
 	margin-left:80px;
 	padding-top:80px;
 	width:267px;
@@ -79,7 +85,7 @@ body{
 }
 
 #locationOops{
-	flaot:left;
+	float:left;
 	margin-left:80px;
 	padding-top:80px;
 	width:367px;
@@ -117,7 +123,7 @@ body{
 	
 }
 	
-	input#home{
+	input.home{
 	height:35px;
 	width:237px;
 	background-image:url(../images/form.png);
@@ -307,6 +313,7 @@ td{
 	background-image:url(../images/blueborder.png);
 	background-repeat:repeat;
 	min-height: 400px;
+	float:left;
 
 
 
@@ -427,7 +434,8 @@ td{
 	margin: 0 auto;
 	height: 8px;
 	width:648px;
-	padding: 15px 0 15px 0;
+	padding: 5px 0 5px 0;
+	clear: both;
 }
 
 .gray{
@@ -618,11 +626,31 @@ td{
 	ul.avatar li{
 	
 		width:94px;
-		height:150px;
+		height:100%;
 		margin:0px;
 		padding: 10px;
 		list-style:none;
 		float:left;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:13px;
+		
+		
+	}
+	
+		ul.avatar li a:link{
+	
+		font-size:12px;
+		text-decoration:none;
+		color:#155daa;
+		
+		
+	}
+	
+		ul.avatar li a:hover{
+	
+		font-size:12px;
+		text-decoration:underline;
+		color:#155daa;
 		
 		
 	}
@@ -649,7 +677,7 @@ td{
 		}
 		
 		#bottomAds img{
-			padding: 0 1% 0 0
+			padding: 0 8px 0 0
 		}
 		
 		#buttonsDemo{

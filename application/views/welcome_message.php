@@ -76,7 +76,7 @@
 
 $address = array(
               'name'        => 'address',
-              'id'          => 'home',
+              'class'          => 'home',
               'value'       => 'address',
               'maxlength'   => '100',
               'size'        => '50',
@@ -87,7 +87,7 @@ $address = array(
 
 $city = array(
               'name'        => 'city',
-              'id'          => 'home',
+              'class'          => 'home',
               'value'       => 'city',
               'maxlength'   => '100',
               'size'        => '50',
@@ -95,14 +95,10 @@ $city = array(
               'onBlur'     => 'form_onBlur()'
                );
 
-$county = array(
-			   'name'        => 'county',
-               'id'          => 'home',
-		       'value'       => 'county',
-                );
+
 $state = array(
               'name'        => 'state',
-              'id'          => 'home',
+              'class'          => 'home',
               'value'       => 'state',
               'maxlength'   => '2',
               'size'        => '2',
@@ -113,7 +109,7 @@ $state = array(
 
 $zip = array(
               'name'        => 'zip',
-              'id'          => 'home',
+              'class'          => 'home',
               'value'       => 'zip',
               'maxlength'   => '100',
               'size'        => '50',
@@ -132,7 +128,7 @@ $submit = array(
 echo form_open('main');
 echo form_input($address);
 echo form_input($city);
-echo form_hidden($county);
+echo form_hidden('county', 'county');
 echo form_input($state);
 echo form_input($zip);
 echo form_button($submit);
