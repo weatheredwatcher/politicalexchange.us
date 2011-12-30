@@ -31,12 +31,61 @@
 		
 		switch (myString) {
 
-		case "Columbia"://, "Charleston", "FountainInn", "Greer", "Honea Path", "Irmo", "North Charleston", "North Augusta", "Summerville", "Ware Shoals", "Yemassee":
+		case "Columbia": 
 		    var myCounty = prompt ("Please enter your County:");
 		    
 		    $('input:hidden').val(myCounty);
 		    break;
-
+        case "Charleston":
+		var myCounty = prompt ("Please enter your County:");
+	    
+	    $('input:hidden').val(myCounty);
+	    break;
+        case "Fountain Inn":
+		var myCounty = prompt ("Please enter your County:");
+	    
+	    $('input:hidden').val(myCounty);
+	    break;
+        case "Greer":
+		var myCounty = prompt ("Please enter your County:");
+	    
+	    $('input:hidden').val(myCounty);
+	    break;
+        case "Honea Path":
+		var myCounty = prompt ("Please enter your County:");
+	    
+	    $('input:hidden').val(myCounty);
+	    break;
+        case "Irmo":
+		var myCounty = prompt ("Please enter your County:");
+	    
+	    $('input:hidden').val(myCounty);
+	    break;
+        case "North Charleston":
+		var myCounty = prompt ("Please enter your County:");
+	    
+	    $('input:hidden').val(myCounty);
+	    break;
+        case "North Augusta":
+		var myCounty = prompt ("Please enter your County:");
+	    
+	    $('input:hidden').val(myCounty);
+	    break;
+        case "Summerville":
+		var myCounty = prompt ("Please enter your County:");
+	    
+	    $('input:hidden').val(myCounty);
+	    break;
+        case "Ware Shoals":
+		var myCounty = prompt ("Please enter your County:");
+	    
+	    $('input:hidden').val(myCounty);
+	    break;
+        case "Yemassee":
+		var myCounty = prompt ("Please enter your County:");
+	    
+	    $('input:hidden').val(myCounty);
+	    break;
 
 		}
 	}
@@ -61,7 +110,7 @@
 			<div id="politician">
 				
 				<ul>
-				<li><?=anchor('acount', 'My Account');?></li>
+				<li><?=anchor('account', 'My Account');?></li>
 				<li>  <?=anchor('candidate', 'Candidates');?></li>
 				<li>  <?=anchor('contact', 'Contact Us');?></li>
 				<li>  <?=anchor('about', 'About Us');?></li>

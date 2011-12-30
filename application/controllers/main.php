@@ -33,9 +33,14 @@ $query2 = $this->db->query("SELECT county FROM cities WHERE name='$city'");
 } 
 	$county_query = $this->db->query("SELECT * FROM county_level WHERE county ='$county'");
     $data['county_level'] = $county_query->result();
+    $sql = "SELECT * FROM state_senate WHERE MATCH (represents) AGAINST ('+\"$city\"' in boolean mode)";
+    $senate_level = $this->db->query($sql) or die('error');
+ 	$data['senate'] = $senate_level->result();
 
+    $state_rep = $this->db->query("SELECT reps FROM cities  WHERE name = '$city'");
+	$data['reps'] = $state_rep->result(); 
 
- //defining the locator callback    
+//defining the locator callback    
  $data['locator'] = function($browser) {
 
       
@@ -72,24 +77,21 @@ $query2 = $this->db->query("SELECT county FROM cities WHERE name='$city'");
 		//$this->load->view('coming_soon', $data);
 	}
 	
-	public function testor()
+	public function sandbox()
 	{
 		
 		$city = "Columbia";
 		$this->load->model('profile_model');	
-		$query = $this->db->query("SELECT * FROM city_level WHERE locationID='$city'");
-		$data['politicians'] = $query->result();
-		$query2 = $this->db->query("SELECT county FROM cities WHERE name='$city'");
-
-		$start = $query2->result_array();
-		print_r ($start);
-		$str = implode(",", $start);
-		print_r ($str);
-		$counties = (explode(",", $str));
+		$query = $this->db->query("SELECT * FROM cities WHERE name='$city'");
+		//$data['politicians'] = $query->result();
+		//$query2 = $this->db->query("SELECT county FROM cities WHERE name='$city'");
+        $results = $query->result();
+        print_r ($results);
+foreach($results as $key => $row){
+	
+	echo $key.'::'.$row;
+}
 		
-		foreach($counties as $county){
-			echo ("<h2>$county</h2>");
-		}
 	}
 	
 	

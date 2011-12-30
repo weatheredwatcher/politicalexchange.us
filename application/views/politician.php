@@ -245,7 +245,6 @@ $(document).ready(function() {
 	
 
     	<div id="logoInside">
-	<img src="<?php echo base_url();?>images/logo-icon.png"  alt="Political Exchange" width="84" height="56" />
 			<div id="politician">
 	        <?=$this->load->view('_topmenu');?></div>
 	</div>

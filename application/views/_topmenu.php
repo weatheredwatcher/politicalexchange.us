@@ -1,7 +1,17 @@
-<a href="/home"><img src="images/logo-icon.png"  alt="Political Exchange" width="84" height="56" /></a>
+<?php
+
+$image_properties = array(
+          'src' => 'images/logo-icon.png',
+          'alt' => 'Political Exchange',
+          'width' => '84',
+          'height' => '56'
+         );
+?>
+
+<a href="/home"><?=img($image_properties);?></a>
  <div id="politician">
 <ul>
-<li><?=anchor('acount', 'My Account');?></li>
+<li>  <?=anchor('account', 'My Account');?></li>
 <li>  <?=anchor('candidate', 'Candidates');?></li>
 <li>  <?=anchor('contact', 'Contact Us');?></li>
 <li>  <?=anchor('about', 'About Us');?></li>

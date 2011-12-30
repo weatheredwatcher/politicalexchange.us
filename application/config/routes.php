@@ -48,7 +48,7 @@ $route['about'] = '/corp/about';
 $route['candidate'] = '/welcome/politician';
 $route['hotseat'] = '/hotseat/hotseat_about';
 $route['enable'] = '/welcome/enable';
-
 $route['locator'] = 'welcome/login';
+$route['account'] = '/profile/login';
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
