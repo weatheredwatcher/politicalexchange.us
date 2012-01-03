@@ -3,6 +3,7 @@
 //loads the phpQuery Libraries
 require_once 'phpQuery/phpQuery/phpQuery.php';
 
+
 class Main extends CI_Controller {
 
 	/**
@@ -19,7 +20,16 @@ class Main extends CI_Controller {
 		$data['state'] = urlencode(strtoupper($this->input->post('state')));
 		$data['zip'] = urlencode($this->input->post('zip'));
         $county = urlencode($this->input->post('county'));
- //pulling in the local politicians via anonymous function
+
+		//gonna pull some json magic here
+		
+		$request_state = $this->input->cookie('state_json');
+        $request_fed = $this->input->cookie('federal_json');
+		$json_state = file_get_contents($request_state, true); //getting the file content
+		$json_fed = file_get_contents($request_fed); //getting the file content
+
+		$data['state_json'] = json_decode($json_state);
+		$data['fed_json'] = json_decode($json_fed);
 
 $city = $data['city'];
 $this->load->model('profile_model');	
@@ -30,6 +40,7 @@ $query2 = $this->db->query("SELECT county FROM cities WHERE name='$city'");
 //$start = $query2->result_array();
 //$str = implode(",", $start);
 //$data['counties'] = (explode(",", $str));
+
 } 
 	$county_query = $this->db->query("SELECT * FROM county_level WHERE county ='$county'");
     $data['county_level'] = $county_query->result();
@@ -37,8 +48,8 @@ $query2 = $this->db->query("SELECT county FROM cities WHERE name='$city'");
     $senate_level = $this->db->query($sql) or die('error');
  	$data['senate'] = $senate_level->result();
 
-    $state_rep = $this->db->query("SELECT reps FROM cities  WHERE name = '$city'");
-	$data['reps'] = $state_rep->result(); 
+    //$state_rep = $this->db->query("SELECT reps FROM cities  WHERE name = '$city'");
+	//$data['reps'] = $state_rep->result(); 
 
 //defining the locator callback    
  $data['locator'] = function($browser) {
@@ -79,20 +90,29 @@ $query2 = $this->db->query("SELECT county FROM cities WHERE name='$city'");
 	
 	public function sandbox()
 	{
+        $request_fed = "http://services.sunlightlabs.com/api/legislators.allForLatLong.json?latitude=34.0322176&longitude=-81.0297101&apikey=329d4c2fe0c246f4b5e4f0a509830479";
 		
-		$city = "Columbia";
-		$this->load->model('profile_model');	
-		$query = $this->db->query("SELECT * FROM cities WHERE name='$city'");
-		//$data['politicians'] = $query->result();
-		//$query2 = $this->db->query("SELECT county FROM cities WHERE name='$city'");
-        $results = $query->result();
-        print_r ($results);
-foreach($results as $key => $row){
-	
-	echo $key.'::'.$row;
+       
+		$json_fed = file_get_contents($request_fed); //getting the file content
+		$fed_json = json_decode($json_fed);
+		foreach($fed_json as $key => $content):
+			foreach($content as $key2 => $response):
+			
+			foreach($response as $key3 => $legislators):
+				$image_src = "http://www.opencongress.org/images/photos/thumbs_125/".$legislators->legislator->govtrack_id.".jpeg";
+				$youtube_channel = basename($legislators->legislator->youtube_url);
+				echo img($image_src).'<br />';
+			    echo $legislators->legislator->firstname.' '.$legislators->legislator->lastname;
+				echo '<script src="http://www.gmodules.com/ig/ifr?url=http://www.google.com/ig/modules/youtube.xml&up_channel='.$youtube_channel.'&synd=open&w=320&h=390&title=&border=%23ffffff%7C3px%2C1px+solid+%23999999&output=js"></script>';
+				echo '<hr />';	
+			endforeach;
+		endforeach;
+				
+			
+		endforeach;
+		
+		
 }
-		
-	}
 	
 	
 	
