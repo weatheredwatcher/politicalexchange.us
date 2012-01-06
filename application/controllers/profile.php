@@ -20,6 +20,8 @@ class Profile extends CI_Controller {
 	
 	function view()
 	{
+		$this->load->helper('inflector');
+		
 		$profile_id = $this->uri->segment(3);
 		if(ctype_digit($profile_id)){
 			$this->load->model('profile_model');
@@ -27,7 +29,7 @@ class Profile extends CI_Controller {
 			$data['results'] = $query->result_array();
 			
 		}else{
-			
+			$data['cookie'] = underscore(urldecode($profile_id));
 			$data['name'] = urldecode($profile_id);
 			$data['avatar'] = "images/avatar.png";
 		    

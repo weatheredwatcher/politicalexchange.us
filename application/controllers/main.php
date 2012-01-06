@@ -14,7 +14,7 @@ class Main extends CI_Controller {
 	public function index()
 	{
 	    //here we pull the address in from the locator form
-	     
+	    $this->load->helper('inflector'); 
 	    $data['address'] = urlencode($this->input->post('address'));
 		$data['city'] = urlencode($this->input->post('city'));
 		$data['state'] = urlencode(strtoupper($this->input->post('state')));

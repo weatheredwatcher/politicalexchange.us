@@ -34,7 +34,28 @@
 	
 	
 }
-else { $msg = "<h2 align='center'><span style='color:black;'>Is this you?  <a href='profile/create'>Click to setup an account</a>.</span></h2>";}
+else { $msg = "<h2 align='center'><span style='color:black;'>Is this you?  <a href='profile/create'>Click to setup an account</a>.</span></h2>";
+
+	$profile = unserialize($this->input->cookie($cookie));
+	$youtube_channel = $profile['youtube_channel'];
+	$avatar		=  $profile['image_src'];				
+    $address1   =  $profile['address'];
+    $city       =  $profile['city'];
+    $state      =  $profile['state'];
+	$zip        =  $profile['zip'];
+	$phone      =  $profile['phone'];
+	$fax        =  $profile['fax'];
+	$email      =  $profile['email'];
+	$website_url = $profile['web_url'];
+	$running_for  =  $profile['running_for'];
+	$party_affiliation  = $profile['political_party'];
+	$currently_in_office  = $profile['currently_in_office'];
+	$facebook  =  $profile['facebook'];
+	$twitter   =  $profile['twitter'];
+
+
+
+}
 
 ?>
           <div id="profile">
@@ -46,7 +67,8 @@ else { $msg = "<h2 align='center'><span style='color:black;'>Is this you?  <a hr
             
                   <table  border="0">
   <tr>
-    <td valign="top" class="bordright"><?=img($avatar);?>
+    <td valign="top" class="bordright"><?php if($avatar == ""): ?><?=img('images/avatar');?>
+		<?php else: ?> <?=img($avatar);?> <?php endif; ?>
     <p> Online Last:  <strong></strong><br />
    Next Debate:  <strong></strong></p>
     
@@ -103,6 +125,10 @@ else { $msg = "<h2 align='center'><span style='color:black;'>Is this you?  <a hr
     <td class="gray">Political Views:</td>
     <td class="black"><?=$party_affiliation;?></td>
   </tr>
+  <tr>
+    <td class="gray">Currently in Office:</td>
+    <td class="black"><?=$currently_in_office;?></td>
+  </tr>
 
   <tr>
     <td class="gray">About Me</td>
@@ -127,12 +153,11 @@ else { $msg = "<h2 align='center'><span style='color:black;'>Is this you?  <a hr
                     
               <div align="center" >     
          <div class="sliderGallery">
-            No Videos have been Uploaded Yet.
-          
-            <div class="slider">
+           
+           
                
-         
-        </div>
+        <?php echo '<script src="http://www.gmodules.com/ig/ifr?url=http://www.google.com/ig/modules/youtube.xml&up_channel='.$youtube_channel.'&synd=open&w=320&h=390&title=&border=%23ffffff%7C3px%2C1px+solid+%23999999&output=js"></script>'; ?>
+        
         </div>
                     
      
