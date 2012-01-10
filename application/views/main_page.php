@@ -188,7 +188,7 @@ $(document).ready(function() {
 				  				$title = $legislators->legislator->title;
 				  			    $full_name = $legislators->legislator->firstname.' '.$legislators->legislator->lastname; 
 								
-								$vari_name = underscore($full_name);
+								$vari_name = $legislators->legislator->govtrack_id;
 								//this data is about to be loaded into an array
 								$$vari_name = array(
 				  				'image_src' => "http://www.opencongress.org/images/photos/thumbs_125/".$legislators->legislator->govtrack_id.".jpeg",
@@ -220,7 +220,7 @@ $(document).ready(function() {
 								set_cookie($cookie);
 								?>
 								
-	 						   <li><?=img($image_src)?><br /> <a href="profile/view/<?=$full_name;?>" class="fancybox fancybox.iframe"><?=$title;?>&nbsp;<?=$full_name;?></a></li>
+	 						   <li><?=img($image_src)?><br /> <a href="profile/view/<?=$vari_name;?>" class="fancybox fancybox.iframe"><?=$title;?>&nbsp;<?=$full_name;?></a></li>
 					 
 				  			<?php endforeach; ?>
 				  		<?php endforeach; ?>
@@ -233,7 +233,7 @@ $(document).ready(function() {
 				              
 							              <?php foreach($state_json as $key => $value):
 											  
-											  $vari = underscore($state_json[$key]->full_name);
+											  $vari = $state_json[$key]->id;
 											  $$vari = array(
 				  				  				'image_src' => $state_json[$key]->photo_url ,
 											    'title' => $legislators->legislator->title,
@@ -280,7 +280,7 @@ $(document).ready(function() {
 												   <?=img($state_image);?><br />
 
 
-												   <?php $href="profile/view/".rawurlencode($state_json[$key]->full_name); ?>
+												   <?php $href="profile/view/".$vari ; ?>
 												  <?=anchor($href, $state_json[$key]->full_name, array('class' => 'fancybox fancybox.iframe'));?><br />
 												<?php if($state_json[$key]->chamber == "upper"):?>Representative
 													<?php else:?>Senator <?php endif; ?>
