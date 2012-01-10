@@ -156,7 +156,13 @@ else { $msg = "<h2 align='center'><span style='color:black;'>Is this you?  <a hr
            
            
                
-        <?php echo '<script src="http://www.gmodules.com/ig/ifr?url=http://www.google.com/ig/modules/youtube.xml&up_channel='.$youtube_channel.'&synd=open&w=320&h=390&title=&border=%23ffffff%7C3px%2C1px+solid+%23999999&output=js"></script>'; ?>
+        <?php if ($youtube_channel !=""):
+			 echo '<script src="http://www.gmodules.com/ig/ifr?url=http://www.google.com/ig/modules/youtube.xml&up_channel='.$youtube_channel.'&synd=open&w=320&h=390&title=&border=%23ffffff%7C3px%2C1px+solid+%23999999&output=js"></script>'; 
+			 else:
+				 echo "<h1>No Videos on File.</h1>";
+				 
+			 endif;
+				 ?>
         
         </div>
                     

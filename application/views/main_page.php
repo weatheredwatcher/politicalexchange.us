@@ -220,7 +220,7 @@ $(document).ready(function() {
 								set_cookie($cookie);
 								?>
 								
-	 						   <li><?=img($image_src)?><br /> <a href="profile/view/<?=$vari_name;?>" class="fancybox fancybox.iframe"><?=$title;?>&nbsp;<?=$full_name;?></a></li>
+	 						   <li><?=img($image_src)?><br /> <a href="profile/view/<?=$vari_name;?>"><?=$title;?>&nbsp;<?=$full_name;?></a></li>
 					 
 				  			<?php endforeach; ?>
 				  		<?php endforeach; ?>
@@ -281,7 +281,7 @@ $(document).ready(function() {
 
 
 												   <?php $href="profile/view/".$vari ; ?>
-												  <?=anchor($href, $state_json[$key]->full_name, array('class' => 'fancybox fancybox.iframe'));?><br />
+												  <?=anchor($href, $state_json[$key]->full_name);?><br />
 												<?php if($state_json[$key]->chamber == "upper"):?>Representative
 													<?php else:?>Senator <?php endif; ?>
 												</li>
