@@ -175,6 +175,21 @@ $(document).ready(function() {
 										    'width' => '102',
 										    'height' => '125'
 										     );
+											 
+ 								$haley = array(
+ 										   'src' => 'images/haley',
+ 										    'alt' => 'Political Exchange',
+ 										    'width' => '102',
+ 										    'height' => '125'
+ 										     );
+											 
+ 								$ard = array(
+ 										   'src' => 'images/ard',
+ 										    'alt' => 'Political Exchange',
+ 										    'width' => '102',
+ 										    'height' => '125'
+ 										     );
+											 
 								?>
 			              <li><?=img($obama);?><br /><a href="profile/view/Barack Obama" class="fancybox fancybox.iframe">President Barrack Obama</a></li>
 						  <li><?=img($biden);?><br /><a href="profile/view/Joe Biden" class="fancybox fancybox.iframe">Vice President Joe Biden</a></li>
@@ -228,8 +243,10 @@ $(document).ready(function() {
 						    <?php endforeach; ?>
 						</ul>
 					<div id="divide"></div>
-						<h2>State Legislature</h2>
+						<h2>State Representatives</h2>
 								<ul class="avatar">
+				              <li><?=img($haley);?><br /><a href="profile/view/Nikki Haley" class="fancybox fancybox.iframe">Gov. Nikki Haley</a></li>
+							  <li><?=img($ard);?><br /><a href="profile/view/Ken Ard" class="fancybox fancybox.iframe">Lt. Gov. Ken Ard</a></li>
 				              
 							              <?php foreach($state_json as $key => $value):
 											  

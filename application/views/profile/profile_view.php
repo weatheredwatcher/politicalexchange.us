@@ -37,6 +37,7 @@
 else { $msg = "<h2 align='center'><span style='color:black;'>Is this you?  <a href='profile/create'>Click to setup an account</a>.</span></h2>";
 
 	$profile = unserialize($this->input->cookie($cookie));
+	$full_name = $profile['full_name'];
 	$youtube_channel = $profile['youtube_channel'];
 	$avatar		=  $profile['image_src'];				
     $address1   =  $profile['address'];
@@ -73,7 +74,7 @@ else { $msg = "<h2 align='center'><span style='color:black;'>Is this you?  <a hr
    Next Debate:  <strong></strong></p>
     
     </td>
-    <td valign="top"> <h2> <?=$name;?> </h2><table width="100%" border="0">
+    <td valign="top"> <h2> <?=$full_name;?> </h2><table width="100%" border="0">
   <tr>
     <td colspan="2" bgcolor="#F4F4F4">Campaign Information:</td>
     </tr>
