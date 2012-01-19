@@ -40,10 +40,8 @@ $("#preview_01").cjImageVideoPreviewer({
     	
     	</div>
     	<div id="location" >
-     		<?php echo $error;?>
-
-			
-			<h1 style="color:#FFFFFF; font-family:Tahoma, Geneva, sans-serif;font-weight:normal;margin-bottom:3px;">Your File Was Successfully Uploaded!</h1>
+     		
+			<h1 style="color:#FFFFFF; font-family:Tahoma, Geneva, sans-serif;font-weight:normal;margin-bottom:3px;">Your Profile was Successfully Created!</h1>
 			<p style="color:#FFFFFF; font-family:Tahoma, Geneva, sans-serif;font-weight:normal;margin-bottom:3px;">Please wait for instructions on how to confirm your campaign account.</p>
 			<br /><br />
 

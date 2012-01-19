@@ -50,9 +50,8 @@ $(document).ready(function() {
 <div id="contentwrapInside">
 	
 
-    	<div id="logoInside"><a href="/home"><img src="../images/logo-icon.png"  alt="Political Exchange" width="84" height="56" /></a>
-			<div id="politician">
-	        <?=$this->load->view('_topmenu');?></div>
+    	<div id="logoInside">
+	        <?=$this->load->view('_topmenu');?>
 	</div>
    
 		
@@ -65,9 +64,12 @@ $(document).ready(function() {
                 
                 <div id="topProfile">
                	  <h2>Profiles </h2>
+				  <ul class="avatar">
                   <?php foreach($query->result() as $row):?>
-					<?=anchor("/profile/view/$row->id", $row->name, array('class' => 'fancybox fancybox.iframe'));?><br />
+					<li>  <?=img($row->avatar_id);?><br />
+						<?=anchor("/profile/view/$row->id", $row->name);?></li>
 				<?php endforeach;?>
+				</ul>
                 </div>
                 
                	 <div id="divide"></div>

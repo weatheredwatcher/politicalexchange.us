@@ -1,9 +1,11 @@
 <?php
-
+foreach ($profile as $lookup):
+	$avatar_path = $lookup->avatar_id;
+	
 $login = array(
               'name'        => 'login',
               'id'          => 'login',
-              'value'       => 'Username',
+              'value'       => $lookup->login,
               'maxlength'   => '100',
               'size'        => '50',
               'onClick'     => 'form_onCLick()',
@@ -14,7 +16,7 @@ $login = array(
 $name = array(
               'name'        => 'name',
               'id'          => 'name',
-              'value'       => 'Name',
+              'value'       => $lookup->name,
               'maxlength'   => '100',
               'size'        => '50',
               'onClick'     => 'form_onCLick()',
@@ -24,7 +26,7 @@ $name = array(
 $email = array(
               'name'        => 'email',
               'id'          => 'email',
-              'value'       => 'Email',
+              'value'       => $lookup->email,
               'maxlength'   => '100',
               'size'        => '50',
               'onClick'     => 'form_onCLick()',
@@ -52,17 +54,49 @@ $attributes = array('class' => 'profile', 'id' => 'profile_form');
 $campaign_name = array(
 		     'name'        => 'campaign_name',
 		     'id'          => 'campaign_name',
-		     'value'       => 'Campaign Name',
+		     'value'       => $lookup->campaign_name,
 		     'maxlength'   => '100',
 		     //'size'        => '50',
 		     'onClick'     => 'form_onCLick()',
 		     'onFocus'     => 'form_onFocus()'
 		      );
+			  
+$twitter = array(
+		'name'        => 'twitter',
+   	 	'id'          => 'twitter',
+    	'value'       => $lookup->twitter,
+    	'maxlength'   => '100',
+    	//'size'        => '50',
+    	'onClick'     => 'form_onCLick()',
+    	'onFocus'     => 'form_onFocus()'
+		);
+
+$facebook = array(
+		  'name'        => 'facebook',
+	      'id'          => 'facebook',
+	      'value'       => $lookup->facebook,
+	      'maxlength'   => '100',
+	      //'size'        => '50',
+	      'onClick'     => 'form_onCLick()',
+	      'onFocus'     => 'form_onFocus()'                                         
+			);
+			
+$youtube_channel = array(
+		  'name'        => 'youtube_channel',
+	      'id'          => 'youtube_channel',
+	      'value'       => $lookup->youtube_channel,
+	      'maxlength'   => '100',
+	      //'size'        => '50',
+	      'onClick'     => 'form_onCLick()',
+	      'onFocus'     => 'form_onFocus()'
+		  );
+
+
 
 $address1 = array(
 		     'name'        => 'address1',
 		     'id'          => 'address1',
-		     'value'       => 'address2',
+		     'value'       => $lookup->address1,
 		     'maxlength'   => '100',
 		    // 'size'        => '50',
 		     'onClick'     => 'form_onCLick()',
@@ -72,7 +106,7 @@ $address1 = array(
 $address2 = array(
 		     'name'        => 'address2',
 		     'id'          => 'address2',
-		     'value'       => 'address2',
+		     'value'       => $lookup->address2,
 		     'maxlength'   => '100',
 		     //'size'        => '50',
 		     'onClick'     => 'form_onCLick()',
@@ -82,7 +116,7 @@ $address2 = array(
 $city = array(
               'name'        => 'city',
               'id'          => 'city',
-              'value'       => 'city',
+              'value'       => $lookup->city,
               'maxlength'   => '100',
               //'size'        => '50',
               'onClick'     => 'form_onCLick()',
@@ -92,7 +126,7 @@ $city = array(
 $state = array(
               'name'        => 'state',
               'id'          => 'state',
-              'value'       => 'state',
+              'value'       =>  $lookup->state,
               'maxlength'   => '100',
               //'size'        => '50',
               'onClick'     => 'form_onCLick()',
@@ -103,7 +137,7 @@ $state = array(
 $zip = array(
               'name'        => 'zip',
               'id'          => 'zip',
-              'value'       => 'zip',
+              'value'       => $lookup->zip,
               'maxlength'   => '100',
               //'size'        => '50',
               'onClick'     => 'form_onCLick()',
@@ -114,7 +148,7 @@ $zip = array(
 $phone = array(
 	'name'        => 'phone',
       'id'          => 'phone',
-      'value'       => 'phone',
+      'value'       => $lookup->phone,
       'maxlength'   => '100',
       //'size'        => '50',
       'onClick'     => 'form_onCLick()',
@@ -123,7 +157,7 @@ $phone = array(
 $fax = array(
 	'name'        => 'fax',
       'id'          => 'fax',
-      'value'       => 'fax',
+      'value'       => $lookup->fax,
       'maxlength'   => '100',
       //'size'        => '50',
       'onClick'     => 'form_onCLick()',
@@ -132,7 +166,7 @@ $fax = array(
 $website_url = array(
 	'name'        => 'website_url',
       'id'          => 'website_url',
-      'value'       => 'Website Url',
+      'value'       => $lookup->website_url,
       'maxlength'   => '100',
       //'size'        => '50',
       'onClick'     => 'form_onCLick()',
@@ -141,7 +175,7 @@ $website_url = array(
 $about_me = array(
 	'name'        => 'about_me',
       'id'          => 'about_me',
-      'value'       => '',
+      'value'       => $lookup->about_me,
       //'maxlength'   => '100',
       //'size'        => '50',
       'onClick'     => 'form_onCLick()',
@@ -185,9 +219,15 @@ $submit = array(
     'type' => 'submit'
 );
 
+$id = $lookup->id;
+endforeach;
 
-echo form_open_multipart('profile/insert_profile', $attributes);
+echo form_open_multipart('profile/update', $attributes);
+echo form_hidden('id', $id);
 echo form_fieldset('Login Details');
+echo '<div id="avatar" style="position:relative; float:right;">';
+echo img($avatar_path);
+echo '</div>';
 echo form_label('Username', 'login');
 echo form_input($login).'<br />';
 echo form_label('Full Name', 'name');
@@ -199,7 +239,15 @@ echo form_input($password).'<br />';
 echo form_label('Upload Picture', 'avatar_id');
 echo form_upload($Fdata);
 echo form_fieldset_close();
+echo form_fieldset('Social Media');
+echo form_label('Twitter', 'twitter');
+echo form_input($twitter).'<br />';
+echo form_label('Facebook', 'facebook');
+echo form_input($facebook).'<br />';
+echo form_label('You Tube', 'youtube');
+echo form_input($youtube_channel).'<br />';
 
+echo form_fieldset_close();
 echo form_fieldset('Campaign Information');
 echo form_label('Campaign Name', 'campaign_name');
 echo form_input($campaign_name).'<br />';

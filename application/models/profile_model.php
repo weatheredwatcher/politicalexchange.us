@@ -15,9 +15,16 @@ class Profile_model extends CI_Model {
 		$this->login = $this->input->post('login');
 		$this->name = $this->input->post('name');
 		$this->email = $this->input->post('email');
-		$this->password = $this->input->post('password');
-		$this->avatar_id = $this->input->post('avatar_id');
+		$this->password = md5($this->input->post('password'));
+		if($_FILES['userfile']['error'] == 0){
+			 $relative_url = 'uploads/'.$this->upload->file_name;
+			 $this->avatar_id = $relative_url;
+		 }
+		//$this->avatar_id = $this->input->post('avatar_id');
 		$this->campaign_name = $this->input->post('campaign_name');
+		$this->twitter = $this->input->post('twitter');
+		$this->facebook = $this->input->post('facebook');
+		$this->youtube_channel = $this->input->post('youtube_channel');
 		$this->address1 = $this->input->post('address1');
 		$this->address2 = $this->input->post('address2');
 		$this->city = $this->input->post('city');
@@ -46,9 +53,21 @@ class Profile_model extends CI_Model {
 		$this->login = $this->input->post('login');
 		$this->name = $this->input->post('name');
 		$this->email = $this->input->post('email');
+		//check if password is changed
+		if($this->input->post('password') != ""):
 		$this->password = $this->input->post('password');
-		$this->avatar_id = $this->input->post('avatar_id');
+	    endif;
+		//check if avatar has changed
+		if ($this->input->post('avatar_id') != ""):
+			 $relative_url = 'uploads/'.$this->upload->file_name;
+			 $this->avatar_id = $relative_url;
+		
+		 endif;
 		$this->campaign_name = $this->input->post('campaign_name');
+		$this->twitter = $this->input->post('twitter');
+		$this->facebook = $this->input->post('facebook');
+		$this->youtube_channel = $this->input->post('youtube_channel');
+		
 		$this->address1 = $this->input->post('address1');
 		$this->address2 = $this->input->post('address2');
 		$this->city = $this->input->post('city');
@@ -65,10 +84,17 @@ class Profile_model extends CI_Model {
 		$this->active = 0;      //active status requires payment to be current
 		
 		
-	//	$this->db->update('profiles', $this, array('id' => $this->input->post('id'));
+        $this->db->update('profiles', $this, array('id' => $this->input->post('id')));
 		
 	}
 	
+	function get_profile($id)
+	{
+		$this->id = $id;
+		$query = $this->db->get_where('profiles', array('id' => $this->id));
+	    return $query->result();
+	
+	}
 	function auth(){
 		$this->login = $this->input->post('login');
 		$this->password = $this->input->post('password');

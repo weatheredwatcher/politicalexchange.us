@@ -2,11 +2,11 @@
 	
 		foreach($results as $row){
 		
-			$name = $row['name'];
+			$full_name = $row['name'];
 			$email = $row['email'];
 			$campaign_name = $row['campaign_name'];
 			$address1 = $row['address1'];
-			if($row['avatar_id'] == 0){$avatar = "/images/avatar.png";}else{$avatar = $row['avatar_id'];}
+			$avatar = $row['avatar_id'];}
 			$address2 = $row['address2'];
 			$city = $row['city'];
 			$state = $row['state'];
@@ -18,12 +18,15 @@
 			$party_affiliation = $row['party_affiliation'];
 			$running_for = $row['running_for'];
 			$currently_in_office = $row['currently_in_office'];
+			$twitter = $row['twitter'];
+			$facebook = $row['facebook'];
+			$youtube_channel = $row['youtube_channel'];
 			//add currently logged in and last log in 
 		    $msg = "";
 		}
 	
 	
-	}
+	
 	else { $msg = "<h2 align='center'><span style='color:black;'>Is this you?  <a href='profile/create'>Click to setup an account</a>.</span></h2>";
 
 		$profile = unserialize($this->input->cookie($cookie));
@@ -215,7 +218,9 @@ $(document).ready(function() {
   			   		<?php else: ?> <?=img($avatar);?> <?php endif; ?>
   			       <p> Online Last:  <strong></strong><br />
   			      Next Debate:  <strong></strong></p>
-    
+                  <a href="http://www.twitter.com/<?=$twitter;?>"><?=img("images/twitter.png");?></a>
+                  <a href="http://www.facebook.com/<?=$facebook;?>"><?=img("images/facebook.png");?></a>
+                  
   			       </td>
   			       <td valign="top"> <h2> <?=$full_name;?> </h2><table width="100%" border="0">
   			     <tr>
@@ -255,11 +260,11 @@ $(document).ready(function() {
   			     </tr>
   			   <tr>
   			       <td class="gray">Email Address</td>
-  			       <td class="black"><?=$email;?></td>
+  			       <td class="black"><a href="mailto:<?=$email;?>"><?=$email;?></a></td>
   			     </tr>
   			   <tr>
   			       <td class="gray">Web Site</td>
-  			       <td class="black"><?=$website_url;?></td>
+  			       <td class="black"><a href="<?=$website_url;?>"><?=$website_url;?></a></td>
   			     </tr>
   			    <tr>
   			       <td class="gray">Running For:</td>
