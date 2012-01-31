@@ -129,7 +129,7 @@
 			<div id="politician">
 				
 				<ul>
-				<li><?=anchor('account', 'My Account');?></li>
+				<li><?=anchor('admin', 'My Account');?></li>
 				<li>  <?=anchor('candidate', 'Candidates');?></li>
 				<li>  <?=anchor('contact', 'Contact Us');?></li>
 				<li>  <?=anchor('about', 'About Us');?></li>

@@ -50,5 +50,6 @@ $route['hotseat'] = '/hotseat/hotseat_about';
 $route['enable'] = '/welcome/enable';
 $route['locator'] = 'welcome/login';
 $route['account'] = '/profile/login';
+$route['admin'] = '/admin';
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
