@@ -76,6 +76,15 @@ class Profile extends CI_Controller {
 					//$where = get_cookie('email');
 					//$this->db->insert_string('resources', $data);
 				    $this->profile_model->insert_profile(); 
+					$this->load->library('email');
+
+					$this->email->from('mailer@politicalexchange.us', 'Political Exchange');
+					$this->email->to('weatheredwatcher@gmail.com');
+					
+					$this->email->subject('Email Test');
+					$this->email->message('Testing the email class.');
+
+					$this->email->send();
 					$this->load->view('upload/upload_success', $data);
 				}
 			

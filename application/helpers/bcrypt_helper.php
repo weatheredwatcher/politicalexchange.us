@@ -2,8 +2,7 @@
 /**
 *  
 *  @author David Duggins <weatheredwatcher@gmail.com>
-*  @package PX 
-*  @name bcrypt
+*  @package bcrypt 
 *  @uses bcrypt('password', md5('password'));
 *  @copyright David Duggins 2012
 *  @license MIT 
@@ -21,6 +20,7 @@ function bcrypt($password, $salt)
 	$bcrypt_salt = $Blowfish_Pre . $salt . $Blowfish_End;
 
 	$hashed_password = crypt($password, $bcrypt_salt);
+include 'application/helpers/bcrypt_helper.php';
 
 	
 	

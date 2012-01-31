@@ -45,7 +45,7 @@ $("#preview_01").cjImageVideoPreviewer({
 			<p style="color:#FFFFFF; font-family:Tahoma, Geneva, sans-serif;font-weight:normal;margin-bottom:3px;">Please wait for instructions on how to confirm your campaign account.</p>
 			<br /><br />
 
-			
+			<a href="/home">Return to Homepage</a> | <a href="/admin">Login to Your New Account</a>
     </div>
 
 

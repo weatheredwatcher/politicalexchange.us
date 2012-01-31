@@ -189,7 +189,7 @@ $submit = array(
 echo form_open_multipart('profile/insert_profile', $attributes);
 echo form_fieldset('Login Details');
 echo form_label('Username', 'login');
-echo form_input($login).'<br />';
+echo form_input($login).'<span id="input_error" style="display:none;">Please enter a username between 3 and 12 characters</span><br />';
 echo form_label('Full Name', 'name');
 echo form_input($name).'<br />';
 echo form_label('Email', 'email');

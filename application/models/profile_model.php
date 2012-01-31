@@ -5,17 +5,18 @@ class Profile_model extends CI_Model {
 	function __construct()
 	{
 		parent::__construct();
+		$this->load->helper('bcrypt');
 	}
 		
 	function insert_profile()
 	{
-	
+		
 //here we are defining the model for the politicians profile
 	    
 		$this->login = $this->input->post('login');
 		$this->name = $this->input->post('name');
 		$this->email = $this->input->post('email');
-		$this->password = md5($this->input->post('password'));
+		$this->password = bcrypt($this->input->post('password'), md5($this->input->post('password')));
 		if($_FILES['userfile']['error'] == 0){
 			 $relative_url = 'uploads/'.$this->upload->file_name;
 			 $this->avatar_id = $relative_url;
