@@ -30,8 +30,6 @@
 			var href = "http://openstates.org/api/v1/legislators/geo/?long=" + lon + "&lat=" + lat + "&apikey=329d4c2fe0c246f4b5e4f0a509830479";
 			var fed_href = "http://services.sunlightlabs.com/api/legislators.allForLatLong.json?latitude=" + lat + "&longitude=" + lon +"&apikey=329d4c2fe0c246f4b5e4f0a509830479"
 			
-			alert (href);
-			alert(fed_href);
 			$.cookie('state_json', href, { expires: 7, path: '/' });
 			$.cookie('federal_json', fed_href, { expires: 7, path: '/' });
 			
@@ -136,6 +134,7 @@
 				<li>  <?=anchor('contact', 'Contact Us');?></li>
 				<li>  <?=anchor('about', 'About Us');?></li>
 				<li>  <?=anchor('hotseat', 'HotSeat');?></li>
+				<li>  <?=anchor('docs', 'Help');?></li>
 				</ul>
 			</div>
 			<?= img("images/logo.png");?></div>

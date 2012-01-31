@@ -16,5 +16,6 @@ $image_properties = array(
 <li>  <?=anchor('contact', 'Contact Us');?></li>
 <li>  <?=anchor('about', 'About Us');?></li>
 <li>  <?=anchor('hotseat', 'HotSeat');?></li>
+<li>  <?=anchor('docs', 'Help');?></li>
 </ul>
 </div>
