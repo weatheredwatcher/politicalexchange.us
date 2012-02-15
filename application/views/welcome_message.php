@@ -6,11 +6,11 @@
 
 <?=link_tag('stylesheets/styles.css');?>
 <?=link_tag('javascript/fancybox/jquery.fancybox-1.3.4.css');?>
-
+<?=link_tag('stylesheets/menu.css'); ?>
 <!-- updated to jQ 1.2.6 and UI 1.5.2 2008-11-28 -->
     <script src="http://www.politicalexchange.us/javascript/jquery-1.6.2.min.js" type="text/javascript" charset="utf-8"></script>
    <script src="http://www.politicalexchange.us/javascript/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
-   
+   <script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
    
    <script src="http://www.politicalexchange.us/javascript/fancybox/jquery.fancybox-1.3.4.js" type="text/javascript" charset="utf-8"></script>
 
@@ -109,6 +109,51 @@
 	
 	
 </script>
+<!-- INFO for Drop Down Menu -->
+
+
+
+	
+		<script type="text/javascript">
+$(function(){
+
+	//Hide SubLevel Menus
+	$('#menu ul li ul').hide();
+
+	//OnHover Show SubLevel Menus
+	$('#menu ul li').hover(
+		//OnHover
+		function(){
+			//Hide Other Menus
+			$('#menu ul li').not($('ul', this)).stop();
+
+			//Add the Arrow
+			$('ul li:first-child', this).before(
+				'<li class="arrow">arrow</li>'
+			);
+
+			//Remove the Border
+			$('ul li.arrow', this).css('border-bottom', '0');
+
+			// Show Hoved Menu
+			$('ul', this).slideDown();
+		},
+		//OnOut
+		function(){
+			// Hide Other Menus
+			$('ul', this).slideUp();
+
+			//Remove the Arrow
+			$('ul li.arrow', this).remove();
+		}
+	);
+
+});
+ 
+		</script>
+
+<!-- END INFO for Drop Down Menu -->
+
 
 </head>
 
@@ -125,19 +170,29 @@
 <div id="contentwrap">
 	
     <div id="stars">
-    	<div id="logo">
+    	
 			<div id="politician">
-				
+				<div id="menu">
 				<ul>
-				<li><?=anchor('admin', 'My Account');?></li>
+				<li><?=anchor('admin', 'My Account');?>
+	        	<ul>
+	            <li><a href="#">Login</a></li>
+	            <li><a href="#">Profile</a></li>
+	            <li><a href="#">Media</a></li>
+	            <li><a href="#">Questions</a></li>
+	            <li><a href="#">Hotseat</a></li>
+	            </ul></li>
+            
+				
 				<li>  <?=anchor('candidate', 'Candidates');?></li>
 				<li>  <?=anchor('contact', 'Contact Us');?></li>
 				<li>  <?=anchor('about', 'About Us');?></li>
 				<li>  <?=anchor('hotseat', 'HotSeat');?></li>
 				<li>  <?=anchor('docs', 'Help');?></li>
 				</ul>
+				</div>
 			</div>
-			<?= img("images/logo.png");?></div>
+			<div id="logo"><?= img("images/logo.png");?></div>
     	<div id="location" >
         <?=img("images/location.png");?>
 <?php 

@@ -20,7 +20,6 @@ function bcrypt($password, $salt)
 	$bcrypt_salt = $Blowfish_Pre . $salt . $Blowfish_End;
 
 	$hashed_password = crypt($password, $bcrypt_salt);
-include 'application/helpers/bcrypt_helper.php';
 
 	
 	

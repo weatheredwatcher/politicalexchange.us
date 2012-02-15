@@ -2,4 +2,4 @@
 	<?=anchor('privacy', 'Privacy Policy', array('class' => 'fancybox'));?> |  
 	<?=anchor('terms', 'Terms of Service', array('class' => 'fancybox'));?>  |  
 	<?=anchor('about', 'About');?>  |  
-	<?=anchor('contact', 'Contact Us');?> </div>
+	<?=anchor('contact', 'Contact Us');?> </div></div>

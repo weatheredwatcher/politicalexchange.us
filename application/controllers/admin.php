@@ -51,7 +51,8 @@ class Admin extends CI_Controller {
 	function profile()
 	{
 		if($this->session->userdata('logged_in') == true):
-			$profile_id = $this->uri->segment(3);
+			$profile_id = $this->session->userdata('id');
+				//$this->uri->segment(3);
 		    
 			$this->load->model('Profile_model', 'profile');
 			$data['profile'] = $this->profile->get_profile($profile_id);
